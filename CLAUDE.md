@@ -33,7 +33,7 @@ Deux points où les instructions de l'utilisateur (30/07/2026) priment :
    (`etat_administratif=A`) dont `tranche_effectif_salarie` ∈
    **{01, 02, 03, 11, 12, 21, 22, 31, 32}** — soit 1 à 499 salariés.
    Remplace la procédure de comptage de la section 5 de
-   `NOTE_METHODE_API_ET_CODES_NAF.md`. Exclut donc `NN` (effectif non
+   `docs/passation/01_methode-api-codes-naf.md`. Exclut donc `NN` (effectif non
    renseigné), `00` (0 salarié) et `41`→`53` (500 salariés et plus).
 2. **Découpage sectoriel** : cinq unités de comptage pour les secteurs 3 et 6,
    **dix secteurs au total** (cf. § 4).
@@ -41,7 +41,7 @@ Deux points où les instructions de l'utilisateur (30/07/2026) priment :
 ## 1. Règles absolues sur les données
 
 Non négociables. Elles ont été établies par la vérification documentée dans
-`NOTE_METHODE_API_ET_CODES_NAF.md`.
+`docs/passation/01_methode-api-codes-naf.md`.
 
 1. **Aucun chiffre sans sa source.** Tout nombre publié porte l'URL complète
    qui l'a produit et la date de la requête. Un chiffre sans URL est un chiffre
@@ -170,7 +170,7 @@ de biens, pas gestionnaires), `53.10Z`.
 
 ## 5. Pièges de l'API `recherche-entreprises.api.gouv.fr`
 
-Tous vérifiés. Détail et preuves : `NOTE_METHODE_API_ET_CODES_NAF.md` § 2.
+Tous vérifiés. Détail et preuves : `docs/passation/01_methode-api-codes-naf.md` § 2.
 
 | Piège | Effet si ignoré |
 |---|---|
