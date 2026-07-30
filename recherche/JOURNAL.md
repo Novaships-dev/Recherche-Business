@@ -511,3 +511,170 @@ pas noté ».
 
 Livrables : `recherche/SYNDICS_GESTION_LOCATIVE.md` et
 `recherche/SYNDICS_GESTION_LOCATIVE_avis.md`.
+
+---
+
+## 30/07/2026 — Session 5 : étapes 2 à 6 sur TRANSPORT DERNIER KM
+
+### L'ordre du protocole a été inversé, et c'est ce qui a payé
+
+Instruction de l'utilisateur en début de session : exécuter **l'étape 6 avant
+l'étape 2**. Motif énoncé — « sur les deux secteurs précédents on a payé le plein
+tarif avant de trouver le motif d'élimination, autant chercher d'abord là où ça
+peut fermer ».
+
+Résultat : le secteur est tombé en **25 requêtes**, sans qu'aucun éditeur, aucun
+CA, aucun prix ni aucun avis n'ait eu à être instruit. Les sessions 3 et 4
+avaient coûté l'intégralité du protocole pour un NO-GO chacune.
+
+**À généraliser pour les secteurs restants** : quand une hypothèse d'éliminatoire
+n° 3 est identifiable dès le plan de campagne, l'étape 6 passe en premier. C'est
+la seule étape qui peut conclure seule, et c'est la moins chère.
+
+### Le fait structurel du secteur : eFTI certifie le logiciel, pas l'entreprise
+
+Vérifié sur le texte, comme demandé, et pas sur des articles. Règlement (UE)
+2020/1056 :
+
+- **Art. 3, pt 11** — est « développeur de plateforme eFTI » quiconque a
+  développé une plateforme « **or for putting that platform on the market** ».
+  Un éditeur de logiciel est dedans par définition.
+- **Art. 4 § 2** — l'opérateur qui transmet une information réglementaire par
+  voie électronique à une autorité « **shall do so on the basis of data processed
+  on a certified eFTI platform and, if applicable, by a certified eFTI service
+  provider** ».
+- **Art. 11** — les organismes d'évaluation de la conformité sont accrédités au
+  titre du règlement (CE) 765/2008 ; chaque État désigne une autorité qui publie
+  la liste **sur un site officiel de l'État**.
+- **Art. 12** — certification **de la plateforme**, marque de certification,
+  et **réévaluation obligatoire à chaque révision des spécifications techniques**
+  (§ 4).
+- **Art. 13** — certification **du prestataire de services**.
+
+Réponse à la question posée par l'utilisateur : **la certification porte sur les
+deux**, par deux articles distincts. Et elle porte sur le logiciel lui-même, ce
+qui est exactement la formulation de l'éliminatoire n° 3.
+
+### Le point qu'on aurait manqué en s'arrêtant au règlement de 2020
+
+L'annexe I partie B du règlement de 2020 est **vide à l'origine** : elle est
+remplie par acte délégué avec les droits nationaux notifiés. Lue seule, elle
+laissait croire que le transport intérieur français était hors périmètre et que
+seul l'international était visé.
+
+Le **règlement délégué (UE) 2024/2025 du 15 juillet 2024** la remplit. L'entrée
+« France » y inscrit **l'article R3411-13 du code des transports** et **l'arrêté
+du 9 novembre 1999 relatif aux documents de transport devant se trouver à bord** :
+la lettre de voiture nationale. Les 22 323 cibles sont donc concernées, sans
+rouler à l'international.
+
+**Règle à retenir : un règlement européen dont une annexe renvoie à des actes
+délégués n'est pas lisible sans ses actes délégués.** Le texte de base peut
+inverser le sens de la conclusion.
+
+### La date d'échéance, recalculée depuis les textes et non reprise
+
+L'art. 5 § 1 ne donne pas de date : il dit « 30 mois après l'entrée en vigueur du
+premier des actes délégués et d'exécution visés aux art. 7 et 8 ». Le règlement
+d'exécution (UE) 2024/1942 a été publié au JOUE le **20/12/2024** et entre en
+vigueur le vingtième jour suivant, soit le **09/01/2025**. Plus 30 mois =
+**9 juillet 2027**.
+
+Ce calcul, fait sur les textes, tombe exactement sur la date annoncée par la
+page eFTI de la Commission. Les deux se confirment mutuellement.
+
+### Un second motif d'élimination, indépendant du premier
+
+Fenêtre de lancement à rebours depuis le 9 juillet 2027 : mise en ligne cible au
+**9 juillet 2026**, soit **21 jours avant la date de la session**. Le début du
+développement est donc passé lui aussi.
+
+Les deux motifs sont autonomes. Lever la certification ne rouvrirait pas le
+secteur, et inversement. C'est la première fois qu'un secteur est fermé deux
+fois par des causes sans rapport.
+
+### Les deux hypothèses d'éliminatoire de l'utilisateur : une bonne, une écartée
+
+L'utilisateur avait désigné le chronotachygraphe comme « le point qui peut fermer
+le secteur ». Il ne le ferme pas. Vérifié sur le texte primaire, l'**arrêté du
+6 juillet 2005** n'impose **aucun agrément ni homologation sur le logiciel** de
+téléchargement et d'archivage : seulement des fréquences (28 jours carte
+conducteur, 95 jours mémoire de masse), une conservation de 365 jours et une
+structure de nom de fichier (`.C1B`, `.V1B`). Le seul « organisme agréé » du
+texte est un atelier, saisi sur le véhicule en cas d'échec de téléchargement.
+
+Le **registre des transporteurs et la licence de transport intérieur** ne ferment
+rien non plus : ils portent sur l'entreprise (honorabilité, capacité
+professionnelle, capacité financière), délivrés par le préfet de région.
+
+C'est eFTI qui ferme — le point ajouté au plan de campagne, pas ceux qui étaient
+attendus. **À consigner : l'éliminatoire n'était pas là où le secteur le
+signalait.**
+
+### EUR-Lex est fermé au robot — et le contournement est validé
+
+`eur-lex.europa.eu` renvoie **HTTP 202 avec un corps vide** sur les formats HTML
+et PDF, cinq tentatives, en `curl` comme en `WebFetch`. Comportement
+d'anti-robot, à ranger avec les 403 de `pappers.fr`, `verif.com` et
+`infogreffe.fr`.
+
+**Voie d'accès au droit de l'Union pour ce repo, testée et opérationnelle :**
+
+```
+http://publications.europa.eu/resource/celex/[CELEX]
+  -H "Accept: application/xhtml+xml"
+  -H "Accept-Language: fra"
+```
+
+L'API cellar de l'Office des publications sert le texte officiel intégral, en
+français, en une requête. Elle a rendu 32024R2025, 32025R2243 et 32024R1942.
+Attention : `Accept: text/html` et `Accept: application/pdf` renvoient **404** —
+seul `application/xhtml+xml` fonctionne.
+
+Second recours, utilisé pour le règlement de base 32020R1056 :
+`legislation.gov.uk/eur/2020/1056/adopted`, version « as adopted by EU »,
+miroir d'État réutilisé sous décision 2011/833/UE. Valable pour les textes
+antérieurs au 31/12/2020 uniquement.
+
+### Un piège de source, évité de justesse
+
+Le premier PDF récupéré, annoncé par la recherche comme le règlement eFTI et
+hébergé sur `transport-community.org`, s'est révélé être un **diaporama de
+présentation** de novembre 2021. 12 pages, 7 980 caractères — soit 665 caractères
+par page, densité incompatible avec un texte juridique. C'est ce ratio qui a
+déclenché la vérification.
+
+**Contrôle à systématiser** : après extraction d'un PDF censé être un texte de
+loi, mesurer les caractères par page avant de lire. Un texte réglementaire tourne
+autour de 3 000 ; en dessous de 1 500, c'est autre chose.
+
+### Réutilisation du code de l'app BTP : le champ n'est plus INCONNU
+
+Les briques ont été communiquées par l'utilisateur en début de session. Sur ce
+secteur, **trois transposent pleinement** — Factur-X, suivi documentaire des
+sous-traitants avec vigilance en cascade, application terrain hors-ligne — une
+quatrième transpose techniquement mais atterrit dans la zone soumise à
+certification (génération de documents et signature = lettre de voiture), une
+transpose à moitié (devis oui, situations de travaux non : le transport se
+facture à l'envoi, pas à l'avancement), une pas du tout (corps de métier BTP).
+
+**Note 3.** Meilleur score de réutilisation obtenu à ce jour, sur un secteur
+fermé. À consigner comme tel : la réutilisabilité du code n'ouvre pas un marché.
+
+### Verdict du secteur
+
+**NO-GO, éliminé.** Éliminatoire n° 3 (certification d'État sur le logiciel
+métier) : règlement (UE) 2020/1056, art. 12 et 13, avec le droit français notifié
+à l'annexe I partie B par le règlement délégué (UE) 2024/2025. Second motif
+indépendant : fenêtre de lancement fermée depuis le 9 juillet 2026.
+
+Éliminatoire n° 1 franchi (22 323 cibles, 7,4 × le seuil). **Éliminatoires n° 2
+et n° 4 non vérifiés** — étapes 2, 3 et 4 non exécutées. À ne pas reporter comme
+« franchis » dans la synthèse.
+
+Score : non calculable. Six points acquis sur les trois champs instruits
+(cibles 2, échéance 1, réutilisation BTP 3), trois champs `INCONNU`. Le total
+sur 18 ne doit pas être publié ni comparé.
+
+Livrables : `recherche/TRANSPORT_DERNIER_KM.md` et
+`recherche/TRANSPORT_DERNIER_KM_avis.md`.
