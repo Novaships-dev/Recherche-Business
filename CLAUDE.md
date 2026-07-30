@@ -37,6 +37,24 @@ Deux points où les instructions de l'utilisateur (30/07/2026) priment :
    renseigné), `00` (0 salarié) et `41`→`53` (500 salariés et plus).
 2. **Découpage sectoriel** : cinq unités de comptage pour les secteurs 3 et 6,
    **dix secteurs au total** (cf. § 4).
+3. **Ordre d'exécution des étapes.** À partir du secteur TRANSPORT, l'étape 6
+   (réglementaire) s'exécute **EN PREMIER**, puis l'étape 3 (groupes et CA),
+   avant l'étape 2. Motif : sur trois secteurs, les éliminatoires n° 3 et n° 4
+   ont fermé les trois. **Chercher d'abord là où ça ferme.**
+
+   Ce que cela change en pratique :
+   - L'étape 6 est la seule qui puisse conclure seule, et la moins chère.
+     Sur TRANSPORT, elle a fermé le secteur en **25 requêtes**, sans instruire
+     un seul éditeur, CA, prix ni avis. Les sessions GMAO et SYNDICS avaient
+     payé le protocole entier pour un NO-GO chacune.
+   - L'étape 3 commence toujours par le champ `dirigeants` avant les `finances`
+     (cf. § 5, « Démasquer la consolidation »).
+   - L'étape 2 ne sert plus qu'à alimenter les étapes suivantes. Une liste
+     d'éditeurs de départ, même approximative, suffit à lancer l'étape 3 : elle
+     sera corrigée par ce que rendent les mentions légales.
+   - **Conséquence à écrire dans chaque livrable** : un secteur fermé tôt laisse
+     des éliminatoires **non vérifiés**, pas « franchis ». Les marquer `INCONNU`
+     et ne jamais les reporter comme acquis dans `SYNTHESE.md`.
 
 ## 1. Règles absolues sur les données
 
@@ -325,14 +343,31 @@ code porte son libellé dans l'attribut `dc:title` (307 codes : 9 de niveau 1,
 
 ## 6. Réserves ouvertes
 
-- **Réutilisation du code de l'app BTP** (champ du barème de score) : la valeur
-  reste `INCONNU`. Aucune information n'a jamais été fournie sur cette
-  application ; le prompt annoncé sur ce point n'est pas arrivé. **Le barème,
-  lui, est connu** (protocole, § 5 du fichier de sortie) :
-  **aucune = 0, partielle = 2, forte = 3.** Renseigner ce champ exige une
-  description de l'app BTP — ne pas le déduire du secteur, ne pas le laisser à 0
-  par défaut en faisant passer une absence d'information pour une absence de
-  réutilisation.
+- **Réutilisation du code de l'app BTP — réserve LEVÉE le 30/07/2026.** Les
+  briques réutilisables ont été communiquées par l'utilisateur : Factur-X et
+  facturation électronique conforme à la réforme française ; suivi documentaire
+  de sous-traitants avec relances automatiques et contrôle de validité en
+  cascade (vigilance rang 2+) ; devis, chantiers, situations de travaux ;
+  application terrain mobile avec fonctionnement hors-ligne ; génération de
+  documents et signature ; corps de métier structurés (carrelage, couverture,
+  électricité, maçonnerie, menuiserie, isolation, façade, chauffage/climatisation).
+  Barème (protocole, § 5 du fichier de sortie) : **aucune = 0, partielle = 2,
+  forte = 3** — soit **3 si au moins trois briques transposent, 2 si une ou deux,
+  0 si aucune**. Détailler **brique par brique**, jamais en bloc.
+
+  **Ce champ ne décide de rien, et il faut le savoir avant de l'instruire.** Sur
+  les trois secteurs traités, il donne son meilleur score — **3 sur TRANSPORT
+  DERNIER KM**, où trois briques transposent pleinement (Factur-X, vigilance
+  sous-traitants en cascade, app terrain hors-ligne) — et le secteur est fermé
+  deux fois par ailleurs. **Il n'a jamais pesé sur un verdict. Il départage des
+  secteurs viables, il n'en ouvre aucun.** Ne pas laisser un score de
+  réutilisation élevé infléchir la lecture des éliminatoires.
+
+  Piège constaté sur TRANSPORT : une brique peut transposer techniquement et
+  atterrir dans la zone barrée. « Génération de documents et signature »
+  transpose vers la lettre de voiture — c'est-à-dire exactement l'objet soumis à
+  la certification eFTI. Vérifier vers **quoi** une brique transpose, pas
+  seulement **si** elle transpose.
 - **Le plafond de 10000 limite le barème, pas l'éliminatoire.** Il n'empêche
   pas de trancher le seuil de 3 000, mais il peut empêcher de distinguer les
   paliers hauts du barème. La cible restreinte aux tranches 01–32 passe
@@ -348,8 +383,19 @@ code porte son libellé dans l'attribut `dc:title` (307 codes : 9 de niveau 1,
   Le cas 68.32A est **résolu** : les SCI ne pèsent que 89 unités sur 4 433 dans
   la cible 01–32 (2,0 %), une SCI n'ayant pas de salarié. Le filtre d'effectif
   évacue ce biais ; ne pas le reporter comme s'il subsistait.
-- **Aucune donnée d'étape 2 à 6 n'existe.** Aucun éditeur, aucun avis, aucune
-  contrainte réglementaire n'a été recherché.
+- **État des étapes 2 à 6, au 30/07/2026** — cette réserve remplace le
+  « aucune donnée d'étape 2 à 6 n'existe » des sessions 1 et 2, devenu faux.
+  Trois secteurs sur dix sont instruits, **tous NO-GO** :
+
+  | Secteur | Étapes menées | Verdict | Éliminatoire | Non vérifiés |
+  |---|---|---|---|---|
+  | INDUSTRIE_GMAO_MAINTENANCE | 2 à 6 | NO-GO | n° 4 | — |
+  | SYNDICS_GESTION_LOCATIVE | 2 à 6 | NO-GO | n° 4 | — |
+  | TRANSPORT_DERNIER_KM | 6 seule | NO-GO | n° 3 | **n° 2 et n° 4** |
+
+  Les sept autres secteurs n'ont que leur étape 1. **Sur TRANSPORT, les
+  éliminatoires n° 2 et n° 4 sont `INCONNU`, pas franchis** — le secteur a été
+  fermé avant les étapes 2 à 5, conformément au § 0 point 3.
 
 ## 7. Git — `main` uniquement
 
