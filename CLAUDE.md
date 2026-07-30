@@ -73,11 +73,25 @@ Non négociables. Elles ont été établies par la vérification documentée dan
    forme juridique : `https://xml.insee.fr/schema/cj-enum.html`
    (attribut `dc:title`). Libellés de tranche d'effectif :
    `https://raw.githubusercontent.com/annuaire-entreprises-data-gouv-fr/search-api/main/app/labels/tranches-effectifs.json`.
-10. **Distinguer « le code NAF » de « la cible commerciale ».** Un code peut être
-    dominé par des inscriptions sans besoin logiciel. Mais **vérifier avant de le
-    répéter** : 68.32A est écrasé par les SCI dans la tranche `NN`, et elles n'y
-    pèsent plus que 2,0 % une fois la cible 01–32 appliquée. Le décompte NAF est
-    un majorant, pas un marché — et le biais dépend du filtre appliqué.
+10. **Distinguer « le code NAF » de « la cible commerciale ».** Le décompte NAF
+    est une **approximation de sens inconnu**, jamais un marché. Il peut
+    sur-compter comme sous-compter, et rien dans le chiffre ne dit lequel.
+    - **Il sur-compte** quand le code est dominé par des inscriptions sans besoin
+      logiciel : 68.32A est écrasé par les SCI dans la tranche `NN` (elles n'y
+      pèsent plus que 2,0 % une fois la cible 01–32 appliquée).
+    - **Il sous-compte** quand le métier s'exerce à titre secondaire sous un autre
+      code : sur les syndics, 4 743 en NAF contre **15 430 titulaires de la carte G**
+      au 1.1.2026, soit un **facteur 3,25** — parce que 68.31Z (agences
+      immobilières) est hors périmètre alors que 94 % des cartes professionnelles
+      portent la transaction. Établi le 30/07/2026, cf. `recherche/SYNDICS_GESTION_LOCATIVE.md` § 1.
+
+    **Règle opératoire : quand la profession dispose d'un registre officiel, publier
+    les deux chiffres et l'écart.** Le registre fait foi comme cible commerciale, le
+    NAF reste indicatif, et l'écart est lui-même une information sur la fiabilité du
+    NAF pour ce métier. Registres connus : cartes professionnelles immobilières
+    (CCI France, décret n° 2015-703), et à chercher systématiquement ailleurs —
+    ordres, autorisations préfectorales, agréments, listes ministérielles.
+    Ne jamais présumer du sens de l'écart avant de l'avoir mesuré.
 
 ## 2. Les quatre éliminatoires
 
@@ -228,6 +242,48 @@ crawler**. `societe.com` répond mais s'arrête à des exercices anciens.
 **Un nom de marque n'est pas une dénomination légale.** « Organilog » et
 « Bob Desk » ne rendent aucun résultat dans l'Annuaire ; leurs éditeurs sont
 `ADALGO` et `BOB DEPANNAGE`. Toujours passer par les mentions légales.
+Confirmé le 30/07/2026 sur les syndics : `POWIMO` rend `total_results: 0`, et
+`NETTY`, `INCH`, `LA SOLUTION CRYPTO` ne rendent aucune entité pertinente.
+
+### Démasquer la consolidation AVANT d'instruire les CA
+
+**À faire en premier à l'étape 3, avant d'aller chercher les chiffres un par un.**
+Le champ `dirigeants` de l'API est renvoyé par la même requête que `finances` :
+le croisement ne coûte aucune requête supplémentaire.
+
+```
+pour chaque éditeur présenté comme concurrent :
+    q=[SIREN]  ->  champ "dirigeants"
+puis croiser les listes entre éditeurs
+```
+
+**Même président, ou même commissaire aux comptes = même groupe.** Deux marques
+concurrentes sur le papier peuvent n'être qu'un portefeuille.
+
+Preuve, 30/07/2026 : `SEIITRA RESEAU` (383003423) et `GERCOP DIGITAL`
+(802055111) ont le même président — **TANGO BIDCO** — et le même commissaire aux
+comptes — **GRANT THORNTON**. Un comparatif de presse de 2019 les présentait
+comme deux éditeurs rivaux, aux côtés de Crypto, ICS et SPI. Ils appartiennent
+tous au même consolidateur.
+
+**Trois conséquences, toutes vérifiées sur ce cas :**
+1. **Compter les marques surestime massivement le nombre d'acteurs.** Ce qui
+   fausse directement l'éliminatoire n° 4, dont le seuil « trois acteurs à plus
+   de 20 M€ » se compte en **groupes**, pas en marques ni en entités.
+2. **Un comparatif de logiciels vieux de quelques années ne décrit plus une
+   concurrence, il décrit un portefeuille.** Le comparatif IRC n° 648 (mai 2019)
+   listait 21 éditeurs de logiciel syndic ; six ans plus tard, la moitié au moins
+   a été absorbée. Utiliser ces documents pour **lister**, jamais pour **juger**
+   un état du marché.
+3. **La holding de tête porte souvent un nom sans rapport avec les marques.**
+   `TANGO BIDCO` (930667019, NAF 64.20Z, créée le 03/07/2024) est un véhicule de
+   reprise. Un nom neutre en `64.20Z` au poste de président est un signal de LBO :
+   le requêter pour découvrir le reste du portefeuille (`q=TANGO BIDCO` a rendu
+   `ORISHA PROPERTY MANAGEMENT`, `ORISHA CONSTRUCTION`, `MUST INFORMATIQUE`).
+
+**Ne pas sommer les CA des entités d'un même groupe** pour obtenir un CA de
+groupe : les flux intra-groupe double-comptent (règle 6 du § 1). Publier chaque
+entité avec son exercice, et chercher le consolidé à part.
 
 ### Paramètres et valeurs valides
 
