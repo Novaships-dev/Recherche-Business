@@ -678,3 +678,198 @@ sur 18 ne doit pas être publié ni comparé.
 
 Livrables : `recherche/TRANSPORT_DERNIER_KM.md` et
 `recherche/TRANSPORT_DERNIER_KM_avis.md`.
+
+## 30/07/2026 — Session 6 : étapes 6, 3, 2 et 4 sur SÉCURITÉ PRIVÉE
+
+Premier secteur traité entièrement dans l'ordre inversé du § 0 point 3 de
+`CLAUDE.md` : étape 6, puis étape 3, puis étapes 2 et 4. Étape 1 non recomptée
+(4 775 cibles, reprises de `PREFILTRE_NAF.md`). 58 requêtes.
+
+### L'ordre inversé a bien fonctionné, mais pas comme prévu
+
+Sur TRANSPORT, l'étape 6 avait fermé le secteur seule, en 25 requêtes. Ici elle
+**n'a rien fermé** — et c'est un résultat utile en soi : elle a coûté environ
+25 requêtes pour établir un `NON` solide sur l'éliminatoire n° 3, ce qui a permis
+d'aborder l'étape 3 en sachant que la seule question restante était la puissance
+de feu des concurrents.
+
+C'est la démonstration que « chercher d'abord là où ça ferme » ne garantit pas
+une fermeture précoce, mais borne le coût dans les deux cas.
+
+### Éliminatoire n° 3 : NON — et la méthode qui l'a établi
+
+Le secteur est saturé de contenu réglementaire écrit par des éditeurs de
+logiciel. Deux d'entre eux affirment une obligation légale de dématérialisation
+**sans citer un seul texte** :
+
+- SEKUR (`LE WEB FRANCAIS SAS`) : « les registres de main-courante doivent être
+  numériques, infalsifiables et horodatés », « la transition vers le "Zéro
+  Papier" est désormais actée ». Aucun décret, aucun article cité.
+- La même affirmation circule sur plusieurs sites d'éditeurs.
+
+**Ce qui a permis de trancher : une convergence contre-intérêt.** Un troisième
+éditeur, MC TRACKER, qui aurait exactement le même intérêt commercial à affirmer
+l'obligation, écrit l'inverse : « le Code de la sécurité intérieure n'impose pas
+de format spécifique ». Recoupé sur Légifrance (art. R631-16 et R631-17, neutres
+technologiquement) et sur une analyse d'avocate (Myrina Prestel, cabinet Squair).
+
+**À systématiser** : quand toutes les sources d'un secteur sont en conflit
+d'intérêt, chercher celle qui parle **contre** son propre intérêt. C'est la seule
+qui a une valeur probante sans source primaire — et elle oriente ensuite la
+vérification sur la source primaire.
+
+### Deux erreurs de référence corrigées
+
+1. **Livre III → Livre VI.** La consigne de session situait les activités privées
+   de sécurité au livre III du code de la sécurité intérieure. C'est le **livre
+   VI** (L611-1 à L648-1, R611-1 à R648-2). Signalé à l'utilisateur, corrigé dans
+   le livrable.
+2. **« NF 525 étendue aux logiciels de paie » : FAUX.** Affirmation trouvée sur
+   plusieurs fermes de contenu. NF 525 vise les systèmes de caisse. Aucune de ces
+   pages ne cite de texte. Ne pas propager.
+
+### La CCN ne crée aucune obligation logicielle — distinction posée
+
+Arbitrage de l'utilisateur, appliqué : qu'une convention rende le calcul des
+heures complexe **ne crée aucune obligation portant sur l'outil**. L'éliminatoire
+n° 3 ne se déclenche que si un texte impose une caractéristique au logiciel.
+
+La CCN IDCC 1351 est objectivement lourde — vacations de 6 à 12 h, 329 h de
+contingent annuel, majorations nuit +10 %, dimanche +10 %, férié +100 %, taux
+renforcés en sûreté aéroportuaire. Rien de tout cela n'atteint l'outil :
+l'obligation de conformité pèse sur l'employeur (Cass., 28/02/2018, responsabilité
+maintenue malgré l'externalisation de la paie). **La complexité est un argument de
+vente, pas une barrière.**
+
+### Le terme « immatriculé » a un sens unique, et il ne bloque pas
+
+Seul régime d'immatriculation trouvé : la **Plateforme Agréée** (PA, ex-PDP) de
+la facturation électronique, immatriculée par la DGFiP — 129 immatriculées
+définitivement au 05/05/2026. **Un logiciel métier n'a pas à l'être** : il peut
+être un simple opérateur de dématérialisation (OD) raccordé à une PA. Aucune
+barrière pour un développeur seul.
+
+À réutiliser tel quel sur les secteurs suivants : la facturation électronique
+n'est jamais un éliminatoire n° 3, sauf à vouloir être la plateforme elle-même.
+
+### Éliminatoire n° 4 : DÉCLENCHÉ par une levée, pas par un CA
+
+**SENEF SOFT (529974511) — 6,5 M€, Isatis Capital, 02/05/2023, série A.**
+
+Qualification faite selon le § 2 de `CLAUDE.md` (arbitrage Praxedo). Deux sources
+concordantes : *L'Usine Digitale* (« premier financement » d'une société qui
+« fonctionne sans lever de fonds depuis 2011 »), *FrenchWeb* (titre « [Série A] »,
+emploi des fonds : « renforcer ses équipes, se développer à l'international et
+diversifier son offre vers des secteurs connexes »). Argent frais entrant. Ni
+MBO, ni LBO, ni OBO, ni cession de titres. **Cela compte.**
+
+**Le point qui a demandé le plus de soin** : l'article de 2023 ne mentionne pas
+la sécurité privée — Senef éditait alors Progisap (services à la personne) et
+Progiclean (propreté, hôtellerie). La sécurité privée est arrivée **après**, via
+Seenet, c'est-à-dire qu'elle est précisément l'un des « secteurs connexes » que
+la levée devait financer. Vérification faite par les mentions légales de
+`seenet-securite.fr` : **même SIREN, 529974511**. L'éditeur du produit sécurité
+est bien celui qui a levé.
+
+**Leçon** : une levée de fonds antérieure à l'entrée sur le secteur ne sort pas
+l'acteur du périmètre de l'éliminatoire — elle peut au contraire être ce qui a
+financé cette entrée. Vérifier l'identité d'entité par les mentions légales, pas
+la chronologie des communiqués.
+
+### Ce que le champ `dirigeants` a rendu
+
+Méthode du § 5 appliquée dans l'ordre, `dirigeants` avant `finances` :
+
+- **KELIO (538209594) a pour président BODET SA (775610504)** — personne morale.
+  Un seul groupe, pas deux acteurs. CA non sommés (règle 6).
+- **HOROQUARTZ (399243922)** : `IKOMA SUSUMU` administrateur et `PEIRSMAN BERT`
+  président du conseil — gouvernance étrangère sur une SA française. Confirme le
+  rattachement au groupe japonais **AMANO** (depuis 2008, ~5 000 personnes).
+  Une signature de contrôle étranger lisible dans le seul champ `dirigeants`.
+- **SEKUR** : président = `HOLDING COCORICO` (890022023, NAF 66.30Z, 2020).
+- **AEXAE (394128466)** est elle-même en **64.20Z**, code de holding, pas
+  d'édition. Dernier exercice publié : **2021**.
+
+### Deux pièges de nommage confirmés, et un nouveau
+
+- « Bodet Software » n'existe pas : la société est **KELIO** depuis le 16/09/2022.
+- « Hector Solution » n'existe pas : l'éditeur est **VIGIFORMATION** (991136508),
+  en NAF **85.59B** — formation, pas édition.
+- **Nouveau** : VIGIFORMATION s'annonce « entreprise individuelle » dans ses
+  mentions légales alors que l'API porte un « Président de SAS ». Contradiction
+  non tranchée, consignée en zone d'ombre. Les mentions légales ne sont pas
+  toujours exactes non plus — les croiser avec l'API, systématiquement.
+
+### `ca: 0` de nouveau rencontré, et de nouveau écrit INCONNU
+
+`SENEF SOFT` : `{"2020": {"ca": 0, "resultat_net": 309145}}` pour une société de
+50 à 99 salariés. Troisième occurrence du piège documenté au § 5 de `CLAUDE.md`.
+Écrit `INCONNU`. Le fondateur a par ailleurs refusé de communiquer son CA à la
+presse en 2023 tout en annonçant vouloir « dépasser 20 M€ sous deux ans » —
+annonce, pas chiffre, non repris comme donnée.
+
+### Un secteur d'entrants très récents
+
+`MC TRACKER` créée le **12/02/2026**, `VIGIFORMATION` le **03/09/2025** — moins
+d'un an chacune, aucun compte publié. Sept éditeurs verticaux identifiés, dont
+deux nés dans l'année. La barrière technique est basse, ce qui est une mauvaise
+nouvelle et non une opportunité : ce qu'un solo peut construire ici, plusieurs le
+construisent simultanément.
+
+### Registre officiel (règle 10) : non mesurable
+
+Le site du CNAPS (`cnaps.interieur.gouv.fr`) a renvoyé `socket hang up` sur
+**quatre tentatives** — mesure, pas impression (règle 8). Des sources secondaires
+annoncent 12 500 entreprises autorisées ; **non repris**, faute de source primaire.
+L'écart registre / NAF reste `INCONNU` pour ce secteur. Ce qui a pu être établi
+via la presse spécialisée : 70 000 cartes professionnelles délivrées en 2025,
+plus de 300 000 agents habilités.
+
+À reprendre quand le site sera joignable — c'est la seule des quatre sources
+externes du § 1 qui ait échoué à ce jour.
+
+### Réutilisation du code de l'app BTP : 3, et pour la première fois sans zone barrée
+
+Quatre briques transposent pleinement : Factur-X, suivi documentaire des
+sous-traitants avec contrôle de validité en cascade, application terrain
+hors-ligne, **génération de documents et signature**. Une transpose à moitié
+(devis oui, situations de travaux non : on facture des heures de vacation, pas un
+avancement). Une pas du tout (corps de métier BTP contre qualifications APS /
+SSIAP / cynophile).
+
+**Le contrôle du § 6 a été fait, et il passe pour la première fois.** Sur
+TRANSPORT, « génération de documents et signature » atterrissait sur la lettre de
+voiture, objet même de la certification eFTI — zone barrée. Ici elle atterrit sur
+le mémento émargé de l'art. R631-16 et les registres du livre VI, que les textes
+laissent explicitement sans format. La brique la mieux ajustée est la n° 2 : le
+décret du 26/12/2025 oblige à « vérifier régulièrement la validité des titres »
+des salariés, ce qui est exactement le contrôle de validité en cascade.
+
+**Meilleur score de réutilisation obtenu à ce jour, et quatrième secteur d'affilée
+où il ne décide rien.** Le § 6 de `CLAUDE.md` se vérifie une quatrième fois.
+
+### Verdict du secteur
+
+**NO-GO, éliminé.** Éliminatoire n° 4 : levée de 6,5 M€ (> 5 M€) par SENEF SOFT,
+éditeur présent sur le secteur via Seenet. S'y ajoutent, sans être nécessaires au
+verdict, KELIO (83 769 181 € de CA 2024) et HOROQUARTZ (81 459 537 €), tous
+secteurs confondus — leur part sur la sécurité privée est `INCONNU`.
+
+**Second motif indépendant : fenêtre de lancement fermée.** L'échéance du décret
+n° 2025-1344 tombe le **01/10/2026**, dans deux mois. Pic d'achat (échéance − 6
+mois) et mise en ligne cible (échéance − 12 mois) sont tous deux dépassés.
+
+Éliminatoires n° 1 (4 775 cibles), n° 2 (aucune gratuité pérenne) et n° 3 (aucune
+certification d'État sur le logiciel) **franchis et vérifiés**. C'est le premier
+secteur où les quatre éliminatoires sont instruits sans qu'aucun ne reste
+`INCONNU`.
+
+**Étape 5 non menée** — corpus de 0 avis, sans valeur de décision après
+déclenchement de l'éliminatoire. À ne pas reporter comme « 0 reproche » dans
+`SYNTHESE.md` : la valeur est `INCONNU`.
+
+Score : non totalisé, secteur éliminé. Sept points sur cinq champs renseignés
+(cibles 1, prix plancher 2, échéance 1, réutilisation BTP 3, certification 0),
+un champ `INCONNU`. Le total sur 18 ne doit être ni publié ni comparé.
+
+Livrables : `recherche/SECURITE_PRIVEE.md` et `recherche/SECURITE_PRIVEE_avis.md`.
