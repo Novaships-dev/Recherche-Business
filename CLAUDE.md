@@ -101,6 +101,20 @@ Un secteur éliminé sur l'un de ces critères est abandonné, pas noté.
    gagnent par la distribution, pas par le produit.
    Protocole : étape 3 et § 5 du fichier de sortie.
 
+**Ce qui compte comme « levée de fonds » au sens du point 4.** Le critère vise
+la **capacité de feu** : de l'argent frais qui entre dans l'entreprise et
+finance du commercial et du marketing. Donc :
+
+- **Compte** : levée en capital (amorçage, série A/B/C…), augmentation de
+  capital, tout apport qui alimente la trésorerie de l'éditeur.
+- **Ne compte pas** : MBO, LBO, OBO, rachat par un fonds, entrée d'un
+  actionnaire au capital par cession de titres. L'argent va aux actionnaires
+  sortants, pas dans l'entreprise, et l'opération **endette souvent la cible**
+  au lieu de lui donner des moyens. À noter comme **changement
+  d'actionnariat**, jamais comme levée.
+
+Arbitrage de l'utilisateur du 30/07/2026, sur le cas Praxedo / MBO+.
+
 **Le score ne décide pas, les éliminatoires décident.** Un secteur à 17/18 avec
 un concurrent gratuit reste NO-GO.
 

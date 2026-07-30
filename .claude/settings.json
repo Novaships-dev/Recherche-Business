@@ -39,7 +39,6 @@
       "WebFetch(domain:www.cofrac.fr)",
       "WebFetch(domain:www.maddyness.com)",
       "WebFetch(domain:www.frenchweb.fr)",
-      "WebFetch(domain:www.lesechos.fr)",
       "WebFetch(domain:www.usine-digitale.fr)",
       "WebFetch(domain:www.praxedo.fr)",
       "WebFetch(domain:www.praxedo.com)",
@@ -80,7 +79,13 @@
       "WebFetch(domain:www.upkeep.com)",
       "WebFetch(domain:limblecmms.com)",
       "WebFetch(domain:www.ibm.com)",
-      "WebFetch(domain:www.infor.com)"
+      "WebFetch(domain:www.infor.com)",
+      "WebFetch(domain:www.fusacq.com)",
+      "WebFetch(domain:www.cfnews.net)",
+      "WebFetch(domain:www.itespresso.fr)",
+      "WebFetch(domain:www.mboandco.com)",
+      "WebFetch(domain:www.annuaire-startups.pro)",
+      "WebFetch(domain:www.saas-guru.com)"
     ]
   }
 }
