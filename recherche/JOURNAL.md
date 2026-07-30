@@ -171,3 +171,90 @@ Les trois fichiers ont été corrigés. Deux leçons :
 - `recherche/JOURNAL.md` (ce fichier)
 - `recherche/PREFILTRE_NAF.md` — 62 codes NAF, 10 secteurs, 9 tranches par code.
   Journal d'audit complet des requêtes conservé hors repo pendant la session.
+
+---
+
+## 30/07/2026 — Session 3 : étapes 2 à 6 sur GMAO / MAINTENANCE (prestataires)
+
+Premier secteur instruit au-delà de l'étape 1.
+
+### Trouvé faux dans le journal de la session 2
+
+> **L'entrée du 30/07 affirme : « Il n'y a pas de blocage », « Aucun blocage,
+> aucun HTTP 429 ». C'est contredit par la mesure.**
+
+Deux **HTTP 429 Too Many Requests** obtenus le 30/07/2026 sur
+`recherche-entreprises.api.gouv.fr`, en appels **séquentiels**, sans aucune
+concurrence, avec l'en-tête **`Retry-After: 4`**. Les deux ont été suivis d'un
+succès à la reprise, sans autre changement que le délai.
+
+L'entrée de la session 2 n'est pas réécrite : elle était exacte pour ce qu'elle
+mesurait — 12 requêtes séquentielles identiques, 12/12 réussies. Elle en tirait
+une conclusion trop large. **Le plafond de débit existe ; il ne s'était pas
+manifesté sur ce protocole de mesure.** La leçon de la session 2 tient toujours
+(un diagnostic est une mesure), et elle s'applique ici à sa propre conclusion :
+« je n'ai pas rencontré de 429 » n'est pas « il n'y a pas de 429 ».
+
+Conduite à tenir : respecter `Retry-After`, garder le séquentiel, et ne pas
+conclure d'une absence d'erreur sur 12 appels qu'aucune limite n'existe.
+
+### Deux pièges de données découverts sur le champ `finances` de l'API
+
+1. **`ca: 0` ne signifie pas « zéro », mais « non renseigné ».** ADALGO
+   (Organilog, SIREN 804963957) publie un exercice 2025 avec `ca` = 0 et
+   `resultat_net` = 216 363 €. Une société de 20 à 49 salariés dégageant ce
+   résultat n'a pas un chiffre d'affaires nul. Même famille de piège que le
+   plafond à 10000. À publier `INCONNU`.
+2. **`finances: null` ne signifie pas « pas d'activité », mais « comptes non
+   publiés ou confidentiels ».** C'est le cas de PRAXEDO (479788689), 100 à 199
+   salariés. La FAQ de l'Annuaire des Entreprises l'explique : une PME peut
+   demander que ses comptes restent confidentiels. Corroboré par societe.com,
+   qui s'arrête à l'exercice 2014 pour la même société.
+
+### Méthode qui fonctionne pour l'étape 3
+
+`pappers.fr`, `verif.com` et `infogreffe.fr` renvoient **HTTP 403** au robot.
+`lesechos.fr` **bloque explicitement le crawler**. La voie qui marche :
+
+```
+mentions légales de l'éditeur  →  SIREN
+  →  https://recherche-entreprises.api.gouv.fr/search?q=[SIREN]
+  →  champ "finances" (base des comptes annuels INPI, republiée par le
+     ministère de l'Économie sur data.gouv.fr)
+```
+
+Source d'État, opposable, et déjà autorisée dans ce repo.
+
+### Le fait structurel du secteur : Nomadia consolide
+
+`NOMADIA GROUP` (SIREN 884911116), holding créée le 06/07/2020, détenue par
+`NEREUS TOPCO` (953661816). Au moins dix filiales identifiées dans l'Annuaire.
+Chronologie des rachats, d'après fusacq.com et cfnews.net, consultés le
+30/07/2026 :
+
+| Date | Opération |
+|---|---|
+| printemps 2021 | Fusion de **Geoconcept**, **Danem** et **B&B Market** → Nomadia |
+| 2023 | **Synchroteam** |
+| 2024 | **Nomadvantage**, **Coredinate** (Allemagne, présence DACH) |
+| annoncé le 24/02/2025 | **7Opteam** (fondée 2013, 25 experts) et **Gazoleen** / Smart Source Development |
+
+**Gazoleen est un acteur direct du segment cible** : interventions de
+maintenance en chauffage-climatisation, « plus de 1 000 entreprises clientes ».
+
+Le CA **consolidé** du groupe reste `INCONNU`. Les 4 705 941 € de CA 2024 de la
+holding sont ses comptes **sociaux** — des honoraires de gestion, pas
+l'activité du groupe. Ne jamais les présenter comme le CA de Nomadia.
+
+### Ce que Reddit rend
+
+**Rien.** `site:reddit.com` sur le vocabulaire GMAO et gestion d'intervention ne
+renvoie aucun résultat Reddit. Consigné tel quel, non compensé par une
+surpondération de Capterra.
+
+### Une limite de source annoncée avant d'être contournée
+
+L'App Store FR de Praxedo affiche **918 avis, 4,5/5**, mais la page web n'en
+expose que quatre : **l'App Store web ne pagine pas les avis**. Un volume
+annoncé mais illisible se consigne comme tel. L'étape 5 bascule sur les sources
+fortes réellement paginables.

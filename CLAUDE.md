@@ -200,6 +200,35 @@ Tous vérifiés. Détail et preuves : `docs/passation/01_methode-api-codes-naf.m
 | **Latence très irrégulière** | Mesuré le 30/07/2026 sur 12 requêtes séquentielles identiques : 12/12 réussies, latence médiane **0,22 s**, maximum **40,3 s**. Aucun blocage, aucun HTTP 429 — mais des décrochages de plusieurs dizaines de secondes. Sous concurrence, l'API renvoie en plus des réponses **non-JSON**. Tout appel doit donc avoir `timeout` ≥ 90 s, retry + backoff, et vérifier que `total_results` est un entier. **Ne jamais déduire un blocage d'une commande lente : le mesurer** |
 | **La liste séparée par virgules donne un `total_results` FAUX** | `tranche_effectif_salarie=01,02,…` est documentée par la spec OpenAPI et filtre réellement, mais son décompte est erroné d'environ 0,5 %, **dans les deux sens**. Établi par énumération exhaustive de 80.10Z : annoncé 3461, réel 3445 (= somme des 9 requêtes par tranche unique, elle exacte). **Ne jamais publier un chiffre issu d'une requête à liste** |
 
+### Le champ `finances` — deux pièges, et la méthode qui marche
+
+Établi le 30/07/2026 en instruisant l'étape 3 du secteur GMAO. Détail et
+preuves : `recherche/JOURNAL.md`, session 3.
+
+| Piège | Effet si ignoré |
+|---|---|
+| **`ca: 0` ne veut pas dire « zéro »** mais **« non renseigné »** | ADALGO (804963957) publie un exercice 2025 avec `ca` = 0 et `resultat_net` = 216 363 €. Publier « CA = 0 » pour une société de 20 à 49 salariés bénéficiaire est un contresens. **Écrire `INCONNU`** |
+| **`finances: null` ne veut pas dire « pas d'activité »** mais **« comptes non publiés ou confidentiels »** | PRAXEDO (479788689), 100 à 199 salariés, a `finances: null`. Une PME peut demander la confidentialité de ses comptes (FAQ de l'Annuaire des Entreprises). Conclure à l'absence d'activité, ou à un micro-acteur, est faux |
+
+**Méthode d'étape 3 qui fonctionne**, à appliquer telle quelle :
+
+```
+mentions légales de l'éditeur  →  raison sociale + SIREN
+  →  https://recherche-entreprises.api.gouv.fr/search?q=[SIREN]
+  →  champ "finances"
+```
+
+La base des comptes annuels de l'INPI, republiée par le ministère de l'Économie
+sur data.gouv.fr, alimente ce champ. C'est une **source d'État, opposable**.
+
+**Ne pas perdre de temps sur** : `pappers.fr`, `verif.com` et `infogreffe.fr`
+renvoient **HTTP 403** au robot ; `lesechos.fr` **bloque explicitement le
+crawler**. `societe.com` répond mais s'arrête à des exercices anciens.
+
+**Un nom de marque n'est pas une dénomination légale.** « Organilog » et
+« Bob Desk » ne rendent aucun résultat dans l'Annuaire ; leurs éditeurs sont
+`ADALGO` et `BOB DEPANNAGE`. Toujours passer par les mentions légales.
+
 ### Paramètres et valeurs valides
 
 - `etat_administratif` : `A`, `C`
