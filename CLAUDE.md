@@ -79,7 +79,7 @@ Non négociables. Elles ont été établies par la vérification documentée dan
     pèsent plus que 2,0 % une fois la cible 01–32 appliquée. Le décompte NAF est
     un majorant, pas un marché — et le biais dépend du filtre appliqué.
 
-## 2. Les trois éliminatoires
+## 2. Les quatre éliminatoires
 
 Un secteur éliminé sur l'un de ces critères est abandonné, pas noté.
 
@@ -96,16 +96,17 @@ Un secteur éliminé sur l'un de ces critères est abandonné, pas noté.
    À vérifier séparément et explicitement, en cherchant les termes `agrément`,
    `référencement`, `certifié`, `homologué`, `immatriculé`. Protocole : étape 6
    et § E.
+4. Trois acteurs à plus de 20 M€ de CA, ou une levée de fonds
+   supérieure à 5 M€, ou un leader à plus de 30 M€ → éliminé. Ils
+   gagnent par la distribution, pas par le produit.
+   Protocole : étape 3 et § 5 du fichier de sortie.
 
 **Le score ne décide pas, les éliminatoires décident.** Un secteur à 17/18 avec
 un concurrent gratuit reste NO-GO.
 
-**Réserve — un quatrième critère élimine, hors de ces trois.** Le protocole
-compte trois éliminatoires en son § E, mais son étape 3 et son barème en
-posent un autre : trois acteurs à plus de 20 M€ de CA, ou une levée de fonds
-supérieure à 5 M€, ou un leader à plus de 30 M€. Le protocole ne le range pas
-parmi « les trois » ; il élimine néanmoins. Ne pas le perdre de vue, et ne pas
-« corriger » le protocole sur ce point — le signaler à l'utilisateur.
+Le § E du protocole n'énumère que les trois premiers. Le quatrième est tranché
+par l'utilisateur le 30/07/2026 et compte au même titre. Ne pas le rétrograder
+en réserve, ne pas « corriger » le protocole sur ce point.
 
 ## 3. Hiérarchie des sources d'avis
 
