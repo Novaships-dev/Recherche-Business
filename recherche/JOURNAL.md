@@ -303,3 +303,211 @@ permanent à 0 € chez un éditeur établi, mais avec **72 heures d'archivage**
 prestataire ne peut pas perdre ses rapports d'intervention en trois jours :
 l'offre n'est pas complète, l'éliminatoire ne se déclenche pas. Décision à
 réexaminer si Organilog élargit ce palier.
+
+---
+
+## 30/07/2026 — Session 4 : étapes 2 à 6 sur SYNDICS / GESTION LOCATIVE
+
+Étape 1 reprise telle quelle de `PREFILTRE_NAF.md` (4 743), non recomptée.
+Contrôle d'intégrité du protocole refait avant de commencer : 400 lignes,
+« /18 », « 3 000 », « Trustpilot » et « 48 h » tous présents.
+
+### Le NAF sous-compte — l'écart va dans le sens inverse de celui attendu
+
+C'était la question posée en priorité, et elle pouvait clore le secteur en dix
+requêtes. Elle a fait l'inverse : elle l'a élargi.
+
+| Mesure | Valeur | Rapport |
+|---|---|---|
+| Cible NAF 68.32A + 68.32B, tranches 01–32 | 4 743 | référence |
+| Mentions carte G (gestion immobilière), 1.1.2026 | **15 430** | **× 3,25** |
+| Mentions carte S (syndic), 1.1.2026 | 5 061 | × 1,07 |
+
+Deux sources indépendantes concordent sur deux dates différentes : tableau UNIS
+sourcé CCI France pour 1.1.2024 et 1.1.2025 (15 613 puis 15 437), Journal de
+l'Agence pour 1.1.2026 (15 430). Trajectoire de lent déclin, cohérente.
+
+**Cause de l'écart, et elle est structurelle** : `68.31Z` (agences
+immobilières) est exclu du périmètre par l'arbitrage du 30/07/2026 parce qu'il
+relève de la transaction. Or 41 471 mentions T pour 43 886 cartes — 94 % des
+cartes portent la transaction. La gérance est très majoritairement une activité
+**seconde** d'une agence classée 68.31Z, pas l'activité principale d'un cabinet
+dédié. S'ajoute l'exclusion des tranches `NN` et `00`.
+
+**À retenir pour les secteurs suivants : l'écart NAF / réalité n'a pas de signe
+prévisible.** Sur 68.32A les SCI gonflaient le décompte brut (session 2) ; sur
+la carte G le NAF le dégonfle d'un facteur 3. Le contrôle par une source métier
+indépendante n'est pas une précaution, c'est une nécessité.
+
+Détail de méthode : le tableau CCI n'existait qu'en **image**. Téléchargé puis
+lu directement. Une donnée dans un JPEG reste une donnée sourçable.
+
+### Une erreur que j'ai commise, et que l'utilisateur a coupée
+
+En annonçant le plan, j'ai écrit « par exemple 4 743 NAF pour ~2 500 cartes G ».
+Ce nombre ne venait de nulle part. L'utilisateur l'a immédiatement interdit
+d'usage tant qu'il n'avait pas d'URL. Il avait raison, et la mesure l'a démenti
+dans des proportions massives : 15 430, pas 2 500 — et dans l'autre sens.
+
+Un chiffre glissé comme « illustration de raisonnement » est un chiffre de
+mémoire déguisé. La règle 2 ne fait pas d'exception pour les exemples.
+
+### Le fait structurel du secteur : deux consolidateurs sous LBO
+
+| Entité | SIREN | CA | Exercice | Groupe |
+|---|---|---|---|---|
+| SEPTEO ADB (SPI) | 412259715 | **27 393 570 €** | 2024 | Septeo |
+| ORISHA TRANSACTION (ex-Immofacile) | 478601826 | **27 394 485 €** | 2020 | Orisha |
+| SEIITRA RESEAU | 383003423 | **21 436 821 €** | 2023 | Orisha |
+| ORISHA PROPERTY MANAGEMENT | 439737222 | 11 302 722 € | 2023 | Orisha |
+| MUST INFORMATIQUE | 410321533 | 8 911 321 € | 2024 | Orisha |
+| GERCOP DIGITAL (MOJO.IMMO) | 802055111 | 2 893 277 € | 2023 | Orisha, **cessée** |
+
+Orisha Real Estate a **dépassé 100 M€ de revenus** au T1 2025 après absorption
+de Seiitra (CFNews, extrait libre d'un article payant), annonce
+« +450 collaborateurs ». Septeo ADB : 3 200 agences, 2 M de lots syndic.
+
+**Éliminatoire n° 4 déclenché** — leader > 30 M€, et trois entités > 20 M€.
+
+### Le piège du comparatif périmé, à consigner
+
+Le comparatif de presse IRC n° 648 (mai 2019, PDF, 21 solutions) présentait
+Crypto, Gercop, Seiitra, ICS et SPI comme cinq concurrents distincts. En 2026,
+**Seiitra Réseau et Gercop Digital ont le même président (TANGO BIDCO) et le
+même commissaire aux comptes (Grant Thornton)** — établi par le champ
+`dirigeants` de l'API, pas par la presse.
+
+**Compter les marques revient à surestimer le nombre d'acteurs.** Un comparatif
+de logiciels de six ans ne décrit plus une concurrence, il décrit un
+portefeuille. Toujours recouper la marque par le SIREN et le dirigeant.
+
+Autre piège du même document : sa colonne « Atouts de la solution » est
+manifestement de la copy fournie par les éditeurs. C'est un annuaire payant, pas
+un banc d'essai. Utilisable pour **lister**, jamais pour **juger**.
+
+### Les deux pièges du champ `finances` se sont redéclenchés
+
+- **VILOGI** (528341571) : `ca` = 0 en 2024, résultat net **143 574 €**.
+  → CA **INCONNU**, pas « zéro ». Principal indépendant survivant du segment
+  professionnel : son chiffre manque, et c'est une vraie lacune.
+- **UBLO** (888056751) : `ca` = 0 en 2023, résultat net **−316 165 €**.
+  → **INCONNU**.
+
+La méthode d'étape 3 de la session 3 a de nouveau fonctionné telle quelle :
+mentions légales → raison sociale + SIREN → champ `finances`. Septeo ADB s'est
+résolu en deux requêtes par ce chemin.
+
+Confirmation supplémentaire du § 5 : `q=NETTY`, `q=INCH`, `q=LA SOLUTION CRYPTO`,
+`q=POWIMO` ne rendent **aucune** entité pertinente. `POWIMO` rend
+`total_results: 0`. Un nom de marque n'est pas une dénomination légale.
+
+### Un MBO/LBO de plus, et la règle tient
+
+Orisha (ex-DL Software) est sous LBO du fonds américain TA Associates depuis
+avril 2021, puis repris via **TANGO BIDCO** (930667019, créée le 03/07/2024).
+Consigné comme **changement d'actionnariat**, jamais comme levée — arbitrage du
+30/07/2026 sur le cas Praxedo, appliqué à l'identique.
+
+### Une levée de 35 M€ que je n'ai délibérément pas retenue
+
+Matera a levé **35 M€** le 25/05/2021 (Bpifrance, Mubadala, Burda). Au-dessus du
+seuil de 5 M€, donc tentante pour l'éliminatoire n° 4. **Écartée** : Matera ne
+vend pas de logiciel aux syndics professionnels, il **remplace** le syndic
+auprès de la copropriété. Ses 35 M€ ne financent pas une force de vente dirigée
+contre un éditeur, ils réduisent le nombre de clients possibles. Menace sur la
+cible, pas concurrent produit.
+
+L'éliminatoire se déclenche de toute façon sur une mesure plus nette — le CA du
+leader — donc rien ne dépendait de cet arbitrage. Il est consigné pour que le
+raisonnement soit rejouable, pas parce qu'il a changé le verdict.
+
+### Trois familles de logiciels, pas deux
+
+À distinguer systématiquement, comme les deux familles du secteur GMAO :
+
+1. **Syndic de copropriété professionnel** (carte S, 5 061) — Septeo SPI Syndic,
+   Seiitra/Thétrawin, Vilogi, Gercop Y15, Timci.
+2. **Gestion locative / gérance professionnelle** (carte G, 15 430) — Septeo SPI
+   Gestion Locative, Orisha Property Management, Vilogi, Ublo.
+3. **Syndic bénévole et bailleur particulier** — hors cible NAF et hors carte,
+   mais c'est **là que vivent les offres gratuites** (Diacamma, open source
+   auto-hébergé) et les prix bas (Copriciel 120 € TTC/an).
+
+L'éliminatoire n° 2 ne se déclenche pas, parce qu'aucune gratuité ne vise le
+professionnel. Vérification faite : Coprolab corrige explicitement que « la
+mention Copriciel gratuit qui circule ne correspond plus à l'offre 2026 ».
+
+### Réglementaire : éliminatoire évité, et une fenêtre qui existe
+
+**Éliminatoire n° 3 : NON.** Source primaire, décret n° 2019-502 du 23 mai 2019
+sur Legifrance : l'obligation pèse sur **« le syndic professionnel »**, à qui il
+impose un *contenu* à mettre en ligne. **Aucune certification, homologation,
+agrément ni référencement de l'outil.** Loi ALUR, décret sur le conseil syndical
+et extranet obligatoire portent tous sur le syndic, jamais sur le logiciel.
+Vérifié explicitement, parce que le contraire aurait tué le secteur.
+
+Échéances : les trois paliers du PPT (2023, 2024, 2025) et le DPE collectif
+≤ 50 lots (01/01/2026) sont **tous échus**. Restent deux paliers du registre
+national d'immatriculation : **février 2027** (décret n° 2025-831 du 19/08/2025)
+et **janvier 2028** (arrêté du 23/06/2026, JO du 19/07/2026). Le second tombe à
+~18 mois, dans la fenêtre 12-36 mois du barème.
+
+Mais le comparatif IRC de 2019 portait déjà une colonne « Immatriculation »
+renseignée chez la grande majorité des 21 solutions. **La conformité
+réglementaire n'est pas un angle d'entrée, c'est un prérequis acquis depuis six
+ans.**
+
+### Étape 5 : corpus de 30, tout juste, et Trustpilot fermé
+
+Corpus : **30 avis lus un par un**, tous en source forte, tous sur stores.
+0 Trustpilot, 0 Reddit, 0 Capterra.
+
+**Trustpilot renvoie HTTP 403 sur 4 URL testées** (matera.eu, www.vilogi.com,
+bailfacile.fr, rentila.com), y compris avec un User-Agent de navigateur. Testé
+avant d'être annoncé — un « ça n'a pas répondu » n'est pas une mesure (règle 8).
+La source la plus haute de la hiérarchie est absente du corpus.
+
+Google Play sert ses avis en JavaScript : WebFetch ne rend que la coquille. Les
+20 avis Matera ont été extraits du **JSON embarqué dans la page**, avec note et
+horodatage d'origine. Méthode réutilisable pour les secteurs suivants.
+
+Reproche dominant : **bug/fiabilité, 13 occurrences** sur 30 avis.
+
+**Un écart de notation entre deux sources fortes**, ce que le § 3 de CLAUDE.md
+n'anticipe pas : Matera affiche 4,8/5 (App Store, 732 avis) et 4,5/5 (Play,
+624 avis), mais sur les 20 avis Play réellement lisibles, **9 sont à 1 ou
+2 étoiles**, dont quatre en 2025-2026. La note agrégée et le contenu récent ne
+disent pas la même chose. Le mécanisme attendu entre Capterra et Trustpilot se
+produit ici **à l'intérieur des sources fortes**.
+
+Signal de recherche primaire, plus parlant que le corpus : **les deux
+applications Vilogi n'ont pas été mises à jour depuis juillet 2024**, soit deux
+ans. Le bug Face ID signalé « depuis plus d'un an » en décembre 2024 n'a pas pu
+être corrigé faute de livraison.
+
+### Deux sources perdues, à consigner comme telles
+
+- **Étude comparative de l'Union Sociale pour l'Habitat (avril 2022)** :
+  HTTP 403 en WebFetch **et** en curl avec User-Agent navigateur. C'était la
+  seule comparaison **indépendante** identifiée — une fédération, sans intérêt
+  dans la vente de logiciel. La lacune la plus regrettable de la session.
+- **Forum UniversImmo et ARC** : non explorés, budget de requêtes absorbé par
+  les étapes 3 et 6. Première piste à ouvrir en cas de réexamen.
+
+Aucune des deux ne change le verdict, qui se joue sur une mesure de CA. Elles
+changeraient la finesse du diagnostic produit.
+
+### Verdict du secteur
+
+**NO-GO, éliminé.** Éliminatoire n° 4 (concentration) : leader > 100 M€, trois
+entités > 20 M€, deux groupes sous LBO. Les trois autres éliminatoires sont
+franchis — volume largement suffisant (15 430), aucune gratuité visant le
+professionnel, aucune certification d'État.
+
+Score sur les six champs renseignables : 11/18. Sans effet : les éliminatoires
+décident, pas le score. Sections 6 à 9 du fichier de sortie laissées **sans
+objet**, conformément au § 2 de CLAUDE.md — « un secteur éliminé est abandonné,
+pas noté ».
+
+Livrables : `recherche/SYNDICS_GESTION_LOCATIVE.md` et
+`recherche/SYNDICS_GESTION_LOCATIVE_avis.md`.
