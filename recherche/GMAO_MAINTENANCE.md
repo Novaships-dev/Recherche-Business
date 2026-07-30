@@ -359,6 +359,9 @@ réel du leader à **175 €/mois** pour 5 utilisateurs.
 
 ## 9. Le test à 48 h
 
+**Test différé — à exécuter seulement si le secteur ressort en tête de
+SYNTHESE.md.**
+
 Le corpus d'avis est vide. La seule chose qui manque pour décider n'est pas une
 donnée de marché, c'est **une douleur client vérifiée**. Le test doit donc aller
 la chercher directement, et non produire une analyse de plus.
