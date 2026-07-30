@@ -258,3 +258,48 @@ L'App Store FR de Praxedo affiche **918 avis, 4,5/5**, mais la page web n'en
 expose que quatre : **l'App Store web ne pagine pas les avis**. Un volume
 annoncé mais illisible se consigne comme tel. L'étape 5 bascule sur les sources
 fortes réellement paginables.
+
+### Étape 5 : les quatre sources fortes sont épuisées, corpus = 4
+
+| Source | Résultat |
+|---|---|
+| Trustpilot | **Aucune fiche n'existe** pour Praxedo, Organilog, Yuman, Bob! Desk |
+| Google Play | **Illisible par fetch** — rendu côté client, deux locales tentées |
+| App Store | 918 avis annoncés, **4 exposés**, aucune pagination |
+| Reddit et forums métier | **Aucun résultat**, aucune discussion de pairs |
+
+**4 avis lisibles**, tous sur un seul éditeur, un par catégorie de reproche. Le
+seuil de 30 du protocole n'est pas approché. Bascule en recherche primaire.
+Capterra et G2 **volontairement non dépouillés** : ne pas compenser l'absence de
+sources fortes par des sources faibles.
+
+Ce que la recherche primaire a rendu, elle : **Bob! Desk se présente comme « le
+1er logiciel GMAO gratuit » alors que son offre est un essai de 14 jours**, et
+**Praxedo affiche « à partir de 35 € » avec un minimum de 5 utilisateurs**, soit
+175 €/mois réels. Deux écarts marketing constatés sur pièces, là où les clients
+n'ont rien écrit.
+
+### Réglementaire : la fenêtre, et l'éliminatoire évité
+
+Facturation électronique — **01/09/2026** : toutes les entreprises doivent
+pouvoir **recevoir** ; **01/09/2027** : les PME et micro-entreprises doivent
+**émettre**. Source : economie.gouv.fr et impots.gouv.fr, 30/07/2026.
+
+**Ce sont les PDP qui sont immatriculées par la DGFiP, pas les logiciels
+métier.** Un outil de gestion se connecte à une PDP. L'éliminatoire n° 3 ne se
+déclenche donc pas — vérifié explicitement avec les termes `immatriculé` et
+`agréé`, parce que le contraire aurait tué le secteur.
+
+### Verdict du secteur
+
+**À CREUSER, 12/18.** Aucun des quatre éliminatoires ne se déclenche. Le point
+décisif n'est pas un éliminatoire mais un vide : **il n'existe pas de corpus de
+défauts documentés**, et le protocole interdit d'en conclure « pas de problème ».
+Livrables : `recherche/GMAO_MAINTENANCE.md` et
+`recherche/GMAO_MAINTENANCE_avis.md`.
+
+**L'appel le plus serré a été l'éliminatoire n° 2** : Organilog a bien un palier
+permanent à 0 € chez un éditeur établi, mais avec **72 heures d'archivage**. Un
+prestataire ne peut pas perdre ses rapports d'intervention en trois jours :
+l'offre n'est pas complète, l'éliminatoire ne se déclenche pas. Décision à
+réexaminer si Organilog élargit ce palier.
