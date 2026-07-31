@@ -873,3 +873,238 @@ Score : non totalisé, secteur éliminé. Sept points sur cinq champs renseigné
 un champ `INCONNU`. Le total sur 18 ne doit être ni publié ni comparé.
 
 Livrables : `recherche/SECURITE_PRIVEE.md` et `recherche/SECURITE_PRIVEE_avis.md`.
+
+## 31/07/2026 — Session 7 : étapes 6 et 3 sur AGRICULTURE / VITICULTURE
+
+Ordre inversé du § 0 point 3 de `CLAUDE.md` : étape 6, puis étape 3. Étape 1 non
+recomptée (≥ 72 866 cibles, reprises de `PREFILTRE_NAF.md` § 4). Étapes 2, 4 et 5
+non menées. **30 requêtes web et 5 requêtes API.**
+
+Session la moins chère des trois menées dans l'ordre inversé, après TRANSPORT
+(25 requêtes) et SÉCURITÉ PRIVÉE (58).
+
+### L'étape 6 n'a pas fermé, l'étape 3 a fermé en une requête
+
+Troisième comportement différent de l'ordre inversé en trois secteurs :
+
+| Secteur | Ce qu'a fait l'étape 6 | Ce qui a fermé | Coût |
+|---|---|---|---|
+| TRANSPORT | a fermé seule | éliminatoire n° 3 (eFTI) | 25 requêtes |
+| SÉCURITÉ PRIVÉE | n'a rien fermé, a établi un `NON` solide | éliminatoire n° 4 (levée 6,5 M€) | 58 requêtes |
+| AGRICULTURE | n'a rien fermé, mais a produit le **second motif** du verdict | éliminatoire n° 4 (CA 144,9 M€) | 30 requêtes |
+
+L'étape 3 a déclenché l'éliminatoire sur **la toute première requête API**, celle
+sur le SIREN d'ISAGRI. L'hypothèse de l'utilisateur était juste, et l'instruire en
+premier a économisé le reste de l'étape.
+
+### Le champ `dirigeants` a rendu deux consolidations sur deux éditeurs
+
+Méthode du § 5 de `CLAUDE.md` appliquée telle quelle, `dirigeants` avant
+`finances`, sans requête supplémentaire.
+
+- `ISAGRI` (327733432) → président **`GROUPE ISA`** (379163546), personne morale.
+- `SMAG` (430406918) → président **`INVIVO AG`** (801076274), personne morale.
+
+Deux sur deux. Le taux commence à être significatif sur l'ensemble de l'étude :
+sur les syndics, `TANGO BIDCO` ; ici, une holding et une union de coopératives.
+**Sur ce marché, un éditeur indépendant est l'exception, pas la règle.**
+
+### Un piège nouveau : le champ `nom_complet` déclare le portefeuille
+
+L'API a rendu, sans qu'on le demande :
+
+```
+nom_complet: ISAGRI (ISAGRI, AGIRIS, TERRE-NET, SO'NEO, PROMIZE, C2J INFO, I-CONE)
+```
+
+**Le champ `nom_complet` liste les noms commerciaux de l'entité.** C'est
+l'inverse exact du piège documenté au § 5 de `CLAUDE.md` (« un nom de marque
+n'est pas une dénomination légale », qui oblige à passer par les mentions
+légales pour aller de la marque vers le SIREN). Ici, une fois le SIREN connu, le
+chemin retour est **gratuit** : l'API donne les marques.
+
+À utiliser systématiquement à l'étape 3 : sur un SIREN d'éditeur, lire
+`nom_complet` avant de partir chercher des comparatifs. Il a rendu ici en une
+ligne ce qu'un comparatif de presse aurait rendu faux (cf. le constat du § 5 sur
+le comparatif IRC n° 648).
+
+### Terre-net appartient à Isagri — piège de source majeur
+
+Conséquence directe de la ligne ci-dessus, et elle a failli passer inaperçue :
+**Terre-net, l'un des principaux médias agricoles français, est une marque de
+l'entité 327733432**, c'est-à-dire d'ISAGRI.
+
+Un article de Terre-net avait été ouvert pendant l'étape 6 pour le calendrier
+réglementaire. Le calendrier est factuel et a été recoupé sur Légifrance et sur
+la DRAAF, donc rien n'est à retirer. Mais **tout contenu de Terre-net portant sur
+un logiciel agricole est publié par le leader du secteur sur ses concurrents** :
+poids **nul** au sens du § 3 de `CLAUDE.md`. Consigné dans le fichier d'avis pour
+la prochaine session qui rouvrirait le secteur.
+
+C'est la deuxième fois que la propriété d'un média ou d'un comparatif change la
+lecture d'une source. La règle générale se confirme : **identifier l'éditeur du
+site avant de lire son contenu, pas après.**
+
+### L'État en concurrent gratuit — une forme d'éliminatoire n° 2 non prévue
+
+Le fait le plus lourd de l'étape 6, et il ne vient d'aucun éditeur.
+
+> « Le ministère de l'agriculture développe en partenariat avec chambre
+> d'agriculture France un outil numérique accessible à tous et qui sera mis à
+> disposition courant 2026 gratuitement. » — DRAAF Centre-Val de Loire
+
+Les Chambres d'agriculture France le disent **« opérationnel en janvier 2027 »**,
+c'est-à-dire **à la date exacte de l'obligation** qu'il sert à remplir (registre
+phytosanitaire au format électronique, arrêté du 24/12/2025).
+
+**Le protocole ne prévoit pas ce cas.** Son éliminatoire n° 2 vise « une offre
+gratuite complète et crédible chez un **acteur établi** » — donc un éditeur. Ici
+le fournisseur gratuit est l'État, et il est aussi l'auteur de l'obligation.
+
+Ce qui a été écrit dans le livrable, et qu'il faut tenir : **`INCONNU`, avec un
+signal fort documenté.** Pas « franchi », pas « déclenché ». Le périmètre
+fonctionnel de l'outil n'est pas publié — registre seul, ou gestion parcellaire
+complète ? — et c'est ce périmètre qui déciderait.
+
+**Point de méthode à retenir pour les secteurs restants :** quand une échéance
+réglementaire est identifiée à l'étape 6, chercher **dans la même passe** si
+l'État accompagne l'obligation d'un outil. Une échéance réglementaire n'est une
+opportunité que si personne ne distribue gratuitement le moyen de s'y conformer.
+Ce contrôle n'avait été fait sur aucun des quatre secteurs précédents.
+
+### Deux confusions écartées, dont une venue du moteur de recherche
+
+1. **Le moteur a affirmé que l'outil gratuit du ministère « s'appelle
+   MesParcelles ».** C'est faux. Les Chambres d'agriculture France présentent
+   elles-mêmes MesParcelles comme une **alternative** à l'outil ministériel
+   (« ou un logiciel de gestion parcellaire comme MesParcelles »), et
+   MesParcelles est payant. La synthèse du moteur a été rejetée et la question
+   tranchée sur la page des Chambres. **Une synthèse de moteur de recherche
+   n'est pas une source** — elle conflate, et elle conflate au pire endroit.
+2. **Les déclarations viticoles ne barrent pas le logiciel.** C'était
+   l'hypothèse de fermeture n° 1 en entrant dans l'étape 6. La page officielle
+   de la DGDDI n'emploie aucun des termes `agréé`, `certifié`, `homologué`,
+   `référencé` pour un intermédiaire : le dépôt se fait directement sur le
+   portail. Un canal EDI à prestataire certifié existe, mais c'est une
+   commodité, pas une condition d'accès au marché. Hypothèse écartée sur pièce.
+
+### Éliminatoire n° 3 : il fallait le scinder en deux
+
+Erreur évitée de justesse — la réponse « OUI » et la réponse « NON » coexistent
+dans ce secteur, sur deux objets différents.
+
+- **Registre phytosanitaire → NON.** L'arrêté du 24/12/2025 impose un **format**
+  (« électronique, lisible par machine », annexe II) et **aucun agrément
+  d'éditeur**. Les tableurs Excel sont explicitement acceptés. Différence de
+  nature avec eFTI sur TRANSPORT : le texte contraint **le fichier**, pas
+  **l'éditeur**.
+- **Notification d'identification animale → un agrément existe.** « Dans le cas
+  d'une édition par un logiciel, il faut utiliser une application agréée par
+  l'Institut de l'Elevage » (FRGDS AURA). Mais `agriculture.gouv.fr` n'emploie
+  « agréés » que pour les **boucles auriculaires**, pas pour les logiciels, et
+  `idele.fr` est fermé au robot (page « connection verification / haphash »).
+
+Conclusion écrite : **`NON` sur le registre phyto (établi sur le texte),
+`INCONNU` sur la notification animale.** Ce n'est pas un éliminatoire constaté,
+c'est une restriction fonctionnelle de portée non mesurée. **Ne jamais répondre
+à l'éliminatoire n° 3 par un OUI/NON unique quand le secteur couvre plusieurs
+métiers réglementés séparément.**
+
+### La règle de rétrécissement a été appliquée, et elle n'a rien rendu
+
+Nouvelle règle de l'utilisateur (31/07/2026) : un éliminatoire qui ne frappe
+qu'un sous-segment ne ferme pas le secteur, il le **rétrécit** — nommer le
+sous-segment, retirer ses codes NAF, recalculer le résidu, continuer ; NO-GO
+seulement si le résidu passe sous 3 000.
+
+Le contrôle a été fait explicitement et il échoue : **la gamme ISAGRI couvre les
+18 codes NAF du secteur** (Geofolia pour les cultures, ISAVIGNE/ISACUVE pour la
+viticulture, Troup'O/Pig'UP/ISAOVIN/ISACHEVRE pour l'élevage). **Résidu : 0.**
+
+La règle est bonne et doit être conservée — mais elle mord sur les éliminatoires
+n° 2 et n° 3, qui sont souvent adossés à une réglementation de métier, beaucoup
+moins sur le n° 4, où un éditeur généraliste couvre par construction tout ce qui
+est adressable.
+
+### Le volume n'a toujours rien prédit
+
+72 866 cibles : le plus gros volume de l'étude, cinq fois SÉCURITÉ PRIVÉE.
+**Cinquième secteur d'affilée où l'éliminatoire n° 1 est franchi et où le secteur
+tombe pour autre chose.** Le seuil de 3 000 n'a encore jamais rien éliminé.
+
+Ici le volume joue même à l'envers : c'est parce que le marché fait 72 866
+exploitations employeuses qu'il nourrit un éditeur de 1 000 à 1 999 salariés à
+144,9 M€ de CA. **Un gros marché est une raison d'attendre un gros concurrent,
+pas une raison d'espérer.**
+
+### Règle 10 : le NAF sous-compte d'un facteur 5,7, et la cause est connue
+
+Recensement agricole 2020 (Agreste) : **416 054 exploitations en activité**
+(France entière), ~389 000 en métropole. Cible NAF 01–32 : **≥ 72 866**.
+
+Contrairement au cas des syndics — où le NAF sous-comptait parce qu'un code
+pertinent était hors périmètre — la cause est ici entièrement dans la
+**définition de la cible** : les tranches `00` et `NN` sont exclues, or la très
+grande majorité des exploitations françaises n'ont aucun salarié.
+
+Les 72 866 ne sont donc pas « les exploitations agricoles » mais **les
+exploitations employeuses**. Ce n'est pas une erreur — une exploitation sans
+salarié est une cible commerciale plus faible — mais l'écart doit être publié et
+ne pas être lu comme une réserve de clients.
+
+### Réutilisation du code de l'app BTP : 3, et le pire atterrissage à ce jour
+
+**Cinquième 3 consécutif, cinquième fois que le champ ne décide rien.** Le § 6 de
+`CLAUDE.md` se vérifie une cinquième fois.
+
+Mais le contrôle « vers **quoi** la brique transpose-t-elle » a rendu ici son
+résultat le plus net, et le plus mauvais :
+
+- **App terrain mobile hors-ligne** — la meilleure transposition du lot, la
+  parcelle étant au réseau ce que le chantier est au BTP — atterrit **exactement
+  sur le registre phyto**, c'est-à-dire sur l'objet de l'outil gratuit du
+  ministère.
+- **Factur-X** atterrit sur la gestion commerciale viticole, où ISAVIGNE annonce
+  plus de 7 000 utilisateurs.
+- **Génération de documents et signature** atterrit sur les déclarations
+  viticoles (qui se déposent sur le portail douane, pas s'impriment) et sur la
+  notification animale (application agréée Idele).
+- Seule la brique n° 2 — **suivi documentaire avec contrôle de validité en
+  cascade** — atterrit en zone libre, vers les Certiphyto et les documents des
+  saisonniers.
+
+Trois briques sur quatre qui transposent le mieux tombent en zone barrée ou
+occupée. C'est le cas le plus démonstratif rencontré depuis le piège eFTI sur
+TRANSPORT.
+
+### Verdict du secteur
+
+**NO-GO, éliminé.** Éliminatoire n° 4 : **ISAGRI SAS (327733432), CA 2024 =
+144 887 287 €**, soit 4,8 fois le seuil de 30 M€, résultat net 11 375 410 €,
+1 000 à 1 999 salariés. Au niveau groupe, **GROUPE ISA (379163546), CA 2024 =
+340 980 000 €**, soit 11,4 fois le seuil. Source : champ `finances` de
+`recherche-entreprises.api.gouv.fr`, alimenté par les comptes annuels INPI.
+
+Réserve portée dans le livrable, sans effet sur le verdict : la part de ce CA
+réalisée sur le seul logiciel d'exploitation agricole est **`INCONNU`**, l'entité
+portant aussi AGIRIS et Terre-net.
+
+**Second motif indépendant : fenêtre de lancement fermée.** Échéance du registre
+phyto numérique au **01/01/2027**, dans 5 mois. Pic d'achat (− 6 mois) et mise en
+ligne cible (− 12 mois) sont tous deux dépassés. Ce motif tiendrait même si
+ISAGRI n'existait pas.
+
+Éliminatoire n° 1 (≥ 72 866 cibles) **franchi et vérifié**.
+
+**Éliminatoires n° 2 et volet animal du n° 3 : `INCONNU`, pas franchis.** À ne
+pas reporter comme acquis dans `SYNTHESE.md`.
+
+**Étape 5 non menée** — corpus de 0 avis. Valeur à reporter : `INCONNU`, jamais 0.
+
+Score : **non totalisé, secteur éliminé.** Sept points sur cinq champs renseignés
+(cibles 3, échéance 1, réutilisation BTP 3, certification 0, CA du leader
+éliminatoire), deux champs `INCONNU` (prix plancher, reproche dominant). Le total
+sur 18 ne doit être ni publié ni comparé.
+
+Livrables : `recherche/AGRICULTURE_VITICULTURE.md` et
+`recherche/AGRICULTURE_VITICULTURE_avis.md`.
