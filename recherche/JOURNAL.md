@@ -1108,3 +1108,133 @@ sur 18 ne doit être ni publié ni comparé.
 
 Livrables : `recherche/AGRICULTURE_VITICULTURE.md` et
 `recherche/AGRICULTURE_VITICULTURE_avis.md`.
+
+---
+
+## 31/07/2026 — Session 8 : nouvelle phase, recherche par irritant (protocole suspendu)
+
+Livrables : `recherche/PISTES_APPS.md` et `recherche/TEST_TERRAIN_A1.md`.
+
+### Ce qui change, sur instruction de l'utilisateur
+
+**`PROMPT_RECHERCHE_SECTEUR.md` est suspendu.** Les règles de données du § 1 de
+`CLAUDE.md` restent intégralement applicables ; les quatre éliminatoires du § 2
+sont remplacés par trois. Ne restent éliminatoires : la certification d'État sur
+le besoin, l'outil gratuit public ou consulaire sur le besoin, le concurrent
+gratuit crédible d'un acteur établi. **Ne sont plus éliminatoires** : la présence
+d'un gros éditeur (reformulée en « couvre-t-il CE besoin ? ») et un marché sous
+3 000 entreprises. Nouveau seuil : 500 clients à 50 €/mois, soit 300 k€/an.
+
+Recherche **par irritant**, sur 27 métiers hors BTP, et non plus par code NAF.
+Consigne complémentaire du même jour : **privilégier les irritants transverses**,
+un irritant touchant cinq métiers d'une famille valant mieux que la meilleure
+niche mono-métier. Livrable classé en deux parties.
+
+### Établi
+
+- **L'API `recherche-entreprises` ne sait pas compter les indépendants, et le
+  plafond ne se casse pas sur cette cible.** La tranche `NN` plafonne à 10000 sur
+  **20 des 21 codes NAF testés** (seule exception : 01.62Z, 6 319). Deux voies de
+  sous-partition ont été essayées sur 74.20Z et **échouent toutes les deux** :
+  `nature_juridique=1000` (entrepreneur individuel) rend 10000, et
+  `est_entrepreneur_individuel=true` rend 10000. La spec OpenAPI n'offre **aucun
+  filtre de date de création** qui aurait donné une partition propre. Les axes
+  géographiques restent interdits (ils filtrent sur les établissements).
+  **Conséquence durable : pour toute cible de micro-entrepreneurs, le décompte
+  NAF est un minorant « au moins un salarié », et rien d'autre.**
+- **L'open data Urssaf remplace utilement l'API sur cette cible.** Jeu
+  `auto-entrepreneurs-par-secteur-dactivite`, dernier trimestre **31/12/2025**,
+  **2 430 751** micro-entrepreneurs administrativement actifs, ventilés en 30
+  secteurs. **La colonne à retenir est « économiquement actifs »**, pas
+  « administrativement actifs » : seuls 49,8 % des micro-entrepreneurs déclarent
+  un CA positif. Prendre la mauvaise colonne double presque la cible.
+- **Indy ferme à lui seul tout le territoire de la facturation.** Offre
+  « Essentiel » à 0 €/mois, non bridée, facture électronique via plateforme
+  agréée DGFiP comprise. Éliminatoire « concurrent gratuit crédible » déclenché
+  sur toute piste dont le cœur est devis + facture + compta.
+- **La facturation électronique est un chemin d'État, pas un marché ouvert.**
+  Réception obligatoire au 01/09/2026, émission micro-entreprises au 01/09/2027,
+  via PDP **immatriculée** — soit un agrément d'État portant sur le logiciel.
+- **L'irritant le mieux prouvé de la session est aussi le plus périmé.**
+  Doctolib a exclu **5 700 praticiens bien-être** (2 700 hypnothérapeutes,
+  1 500 sophrologues, 800 naturopathes), source Le Quotidien du Médecin — poids
+  fort. Mais c'était en 2022, et quatre acteurs occupent désormais le besoin,
+  dont **Zen Agenda, gratuit**. Un irritant excellemment sourcé ne vaut rien si
+  la fenêtre s'est refermée : à retenir pour les prochaines sessions.
+
+### Trouvé faux, ou corrigé
+
+- **Reddit est inaccessible à l'agent**, et pas seulement lent : `reddit.com`
+  est refusé à la fois par la recherche (`API Error 400 : domains not accessible
+  to our user agent`) et par la récupération de page. La source forte n° 3 de la
+  hiérarchie du § 3 de `CLAUDE.md` est donc **structurellement absente** de tout
+  corpus produit depuis cet environnement. Ce n'est pas un incident de session,
+  c'est une contrainte permanente à déclarer dans chaque livrable.
+- **Conséquence directe, et point faible assumé du livrable** : sur une
+  recherche par irritant, les sources disponibles sont massivement des **blogs
+  d'éditeurs de logiciel**, qui décrivent le manque que leur produit comble —
+  poids faible à nul au sens du § 3. Chaque fiche porte donc une ligne
+  « Poids de la preuve ». **La piste A3 est retenue avec la mention explicite que
+  son irritant n'est pas prouvé en source forte.**
+
+### Résultat
+
+**15 pistes instruites, 4 retenues.** Classement : A2 avance immédiate de crédit
+d'impôt SAP pour le prestataire solo (0,66 % de pénétration requise sur 75 300
+organismes NOVA — la meilleure économie du fichier) · A1 dossier client conforme
+du professionnel non-médical · A3 prestation à date unique · B1 devis traiteur au
+convive.
+
+Onze écartées, dont sept par l'éliminatoire du concurrent gratuit : Indy sur la
+facturation, Zen Agenda et Fit'Distance sur les forfaits et le RDV bien-être,
+trois applications HACCP gratuites sur les registres alimentaires.
+
+**Une écartée à réexaminer en priorité** : B2, bonus réparation QualiRépar.
+Écartée uniquement faute de preuve d'irritant sourcée, alors que le dispositif
+pèse 715 200 réparations en 2024 (×4 en un an) et 512 M€ sur 2022-2028.
+
+### Laissé ouvert
+
+- **Le risque n° 1 de la piste A2 n'est pas levé** : l'habilitation de l'éditeur
+  à l'API Tiers de prestation de l'Urssaf est un filtre d'État sur le logiciel.
+  Aucune homologation, audit, coût ni exigence de taille n'est documenté, et de
+  très petits éditeurs l'ont obtenue — mais **cela reste à confirmer avant toute
+  ligne de code**. C'est binaire et gratuit à instruire.
+- **Deux gratuités ont fermé des pistes sans être vérifiées par essai** : Zen
+  Agenda et Fit'Distance sont crédités sur leur seule déclaration d'éditeur, ce
+  que le § 2 de `CLAUDE.md` interdit de tenir pour acquis. À constater.
+- **Trois chiffres reposent sur des sources secondaires** et doivent être repris
+  sur leur source primaire : les 82 776 organismes SAP (publication DGE), les
+  15 000 tatoueurs (SNAT), les élevages félins (LOOF).
+
+### Protocole de terrain sur A1
+
+`recherche/TEST_TERRAIN_A1.md`, écrit à la demande de l'utilisateur, **sans
+aucune recherche web supplémentaire** — le constat étant que ce qui manque sur
+A1 n'est pas dans les sources publiques : un professionnel ne publie pas qu'il
+est en infraction.
+
+Trois partis pris à conserver s'il est réutilisé sur d'autres pistes :
+
+1. **Seuils fixés avant la collecte**, et non renégociables après. Un résultat
+   entre les bornes vaut `INCONNU` et impose une nouvelle collecte.
+2. **Deux seuils, pas un.** Le support (papier / photos) ne suffit pas : c'est
+   le **test de récupération** — « combien de temps pour retrouver un dossier de
+   2023 » — qui décide. Franchir le premier seul signifie « ils sont sur papier
+   et ça leur va très bien », soit le contresens que le test existe pour éviter.
+3. **La question porte sur le lieu d'un objet précis et récent**, jamais sur un
+   ressenti : « votre dernier client de la semaine dernière, sa décharge est où
+   en ce moment ? ». Les mots « logiciel », « outil », « conforme », « RGPD » et
+   « est-ce que vous paieriez » sont interdits avant la dernière question.
+
+**Aucun nom de groupe Facebook ni de compte Instagram n'a été inventé.** Les
+entités citées sont marquées ✅ (rencontrées par requête le 31/07/2026, URL
+reproduite) ou ⬜ (cible de recherche, à confirmer à l'ouverture). Là où je ne
+savais pas, le fichier donne la requête exacte, pas un nom vraisemblable.
+
+**Un risque nouveau, identifié en écrivant le protocole et non instruit** : la
+CNIL publie des modèles et outils gratuits de registre des traitements. S'ils
+couvrent l'obligation telle qu'elle pèse sur un praticien, **l'éliminatoire de
+l'outil public gratuit est déclenché sur la branche bien-être d'A1**, qui se
+réduirait alors aux tatoueurs et aux métiers du vivant animal. Ce contrôle est
+placé au même rang de priorité que les 18 ARS.
