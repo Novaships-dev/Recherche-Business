@@ -435,6 +435,200 @@ que l'obligation. Les ARS ne sont pas le seul émetteur possible :
 
 ---
 
+## 5 bis. RÉSULTAT DU CONTRÔLE — exécuté le 31/07/2026
+
+Seul le § 5 a été exécuté. Les § 1 à 4 restent à faire ; le § 6 reste valable.
+
+### 5bis.1 Correction préalable : le modèle de domaine ARS est faux
+
+Les 18 domaines ont été testés par requête HTTP (`curl`, code de retour et
+redirection). **17 répondent 200.** Une inférence du § 5.2 était fausse :
+
+- **`www.ile-de-france.ars.sante.fr` n'existe pas** (échec de connexion). Le
+  domaine réel est **`www.iledefrance.ars.sante.fr`**, sans tirets, vérifié 200
+  le 31/07/2026. `www.idf.ars.sante.fr` répond 301.
+- Le modèle `[région].ars.sante.fr` connaît donc **deux exceptions** et non une :
+  `paca` et `iledefrance`. Les 16 autres suivent la forme avec tirets.
+
+La colonne « statut » du § 5.2 est à lire comme corrigée : **18 domaines sur 18
+confirmés**, dont un par une orthographe différente de celle qui était inférée.
+
+### 5bis.2 Les 18 ARS — aucun outil trouvé
+
+Requêtes du 31/07/2026, restreintes domaine par domaine, sur
+`tatouage perçage corporel traçabilité registre déclaration professionnels` puis
+`tatouage modèle fiche de traçabilité registre clients télécharger outil hygiène`.
+
+| ARS | Page ou document dédié trouvé | Outil au sens du § 5.1 |
+|---|---|---|
+| PACA | `paca.ars.sante.fr/activite-de-tatouage-percage-corporel-et-maquillage-permanent-0` | **Non** |
+| Île-de-France | `iledefrance.ars.sante.fr/tatouage-piercing-et-maquillage-permanent-informations-pour-les-professionnels` | **Non** |
+| Auvergne-Rhône-Alpes | `.../tatouage-percage-et-maquillage-permanent-comment-declarer-son-activite-aupres-de-lars` | **Non** |
+| Nouvelle-Aquitaine | `.../professionnels-du-tatouage-du-maquillage-permanent-et-du-percage-corporel` + guide 25 p. | **Non** (voir 5bis.3) |
+| Grand Est | `.../declarer-mon-activite-de-tatouage-de-percage-corporel-et-maquillage-permanent-en-grand-est` | **Non** |
+| Pays de la Loire | `.../professionnels-du-tatouage-percage-et-maquillage-permanent-faites-votre-declaration` | **Non** |
+| Hauts-de-France | `.../activite-de-tatouage-percage-corporel-et-maquillage-permanent` | **Non** |
+| Bretagne | `.../tatoueur-perceur-maquillage-permanent` (déclaration sur Démarches simplifiées) | **Non** |
+| Normandie | `.../professionnels-du-tatouage-y-compris-le-maquillage-permanent-et-du-percage-corporel-0` | **Non** |
+| Centre-Val de Loire | `.../activite-de-tatouage-piercing-corporel-et-maquillage-permanent` | **Non** |
+| Bourgogne-Franche-Comté | `.../tatouage-par-effraction-cutanee-maquillage-permanent-percage-corporel-0` | **Non** |
+| Occitanie | `.../tatouage-piercing-et-maquillage-permanent-2` | **Non** (voir 5bis.3) |
+| Corse | **Aucune page dédiée trouvée** — seulement un référent « PFR / PHRV / tatouage » dans un organigramme | **Non** |
+| Guadeloupe | `.../mise-en-lumiere-de-lactivite-denregistrement-des-tatoueurs-perceurs-maquilleurs` | **Non** |
+| Guyane | `.../tatouage-piercing-maquillage-permanent` | **Non** |
+| Martinique | `.../professionnels-du-tatouage-percage-et-maquillage-permanent-0` | **Non** |
+| La Réunion | `.../tatouage-par-effraction-cutanee-maquillage-permanent-et-percage-corporel` | **Non** |
+| Mayotte | `.../tatouage-par-effraction-cutanee-et-percage-corporel-0` | **Non** |
+
+**Ce que les ARS distribuent réellement**, et qui ne qualifie pas au § 5.1 :
+formulaires de **déclaration d'activité** (création, cessation, transfert,
+activité ponctuelle) ; listes d'**organismes de formation habilités** ; listes de
+**prestataires DASRI** ; fiches de **déclaration d'effet indésirable** ; affiches
+de prévention et « 13 règles d'or ». **Ce sont des formalités déclaratives et de
+l'information. Aucune n'est un registre ni une fiche de traçabilité client.**
+
+### 5bis.3 Le constat central : les ARS prescrivent la traçabilité, elles ne l'outillent pas
+
+Deux pièces le démontrent, et ce sont les deux plus favorables qu'ait produites
+le balayage — donc les plus dures à écarter.
+
+**Nouvelle-Aquitaine, « Guide pratique — tatouage par effraction cutanée,
+maquillage permanent et perçage corporel », 25 pages.** Non lisible par l'outil
+de récupération (PDF compressé) ; **extrait en local** pour trancher.
+`https://www.nouvelle-aquitaine.ars.sante.fr/system/files/2018-06/Guide_pratique_professionnels_tatouage_percage.pdf`
+
+Le corps du guide est une **grille d'auto-évaluation** (colonnes « Actions à
+mettre en œuvre | Oui/Non | Écart | Axes d'amélioration »). Ses **7 annexes**,
+relevées une par une :
+
+> Annexe 1 : Fiche de déclaration d'activité · Annexe 2 : Liste des centres de
+> formation habilités en Nouvelle-Aquitaine · Annexe 3 : Modèle de fiche
+> d'information · Annexe 4 : Liste des prestataires DASRI en Nouvelle-Aquitaine ·
+> Annexe 5 : Stérilisation des matériels · Annexe 6 : Fiche de déclaration d'effet
+> indésirable · Annexe 7 : Affiche de conduite à tenir en cas d'accident
+> d'exposition au sang
+
+**Aucune de ces sept annexes n'est un registre, une fiche de traçabilité client
+ou un formulaire de consentement.** Et le guide écrit, sans fournir le document
+correspondant :
+
+> « **Une fiche de traçabilité sera établie pour chaque désinfection.** »
+
+Même chose pour le consentement : le guide impose la « conservation des
+consentements écrits de la personne titulaire de l'autorité parentale ou du
+tuteur pendant 3 ans » — **et n'en donne pas de modèle**.
+
+**Occitanie** va plus loin encore dans la prescription sans outil :
+
+> « Pour vous en tant que professionnel, il est important de mettre en place une
+> **traçabilité de votre travail : Traçabilité client** (entre chaque client,
+> journalier, hebdomadaire…) : Coordonnées du client, acompte… »
+> `https://www.occitanie.ars.sante.fr/tatouage-piercing-et-maquillage-permanent-2`
+
+L'ARS décrit le contenu du registre client attendu. Elle ne le fournit pas.
+**C'est exactement la ligne « informer n'est pas outiller » du § 5.1**, et elle
+tombe du bon côté.
+
+### 5bis.4 Les quatre contrôles adjacents du § 5.4
+
+**1. CNIL — DÉCLENCHÉ, sur un sous-besoin, et il faut en tirer les conséquences.**
+
+La CNIL publie bien un **modèle de registre simplifié gratuit**, téléchargeable
+en `.ods`, `.pdf` et `.rtf`, explicitement destiné aux « petites structures
+(TPE-PME, associations, petites collectivités) », comprenant fiche tutorielle,
+liste de traitements, modèle de fiche à remplir et fiche d'exemple, et satisfaisant
+« au socle d'exigences posées par l'article 30 du RGPD ».
+`https://www.cnil.fr/fr/le-registre-rgpd-de-la-cnil` ·
+`https://www.cnil.fr/sites/cnil/files/atoms/files/registre-traitement-simplifie.ods`
+· `https://www.cnil.fr/fr/rgpd-et-tpepme-un-nouveau-modele-de-registre-plus-simple-et-plus-didactique`,
+consultés le 31/07/2026.
+
+C'est un **outil réel, gratuit, d'une autorité publique, portant sur
+l'obligation elle-même**. L'éliminatoire n° 2 est déclenché — **mais uniquement
+sur le « registre des activités de traitement »**, qui est un document unique
+décrivant les traitements de l'organisme, et **non le dossier client** (consentement
+signé, traçabilité de lot d'encre, archivage 5 ans, pièce par pièce, opposable en
+contrôle ARS). Les deux objets sont distincts.
+
+**Conséquence à porter dans `PISTES_APPS.md`** — non appliquée ici, la consigne
+étant de ne toucher qu'à ce fichier : la fiche A1 doit **exclure explicitement le
+registre des traitements RGPD de sa proposition de valeur**. C'est précisément
+l'obligation que citait la source du durcissement 2026 côté bien-être (« tenir un
+registre des traitements, informer chaque client de ses droits… »). La branche
+bien-être d'A1 **perd donc son argument le plus visible**, et ne conserve que le
+dossier client lui-même. Elle n'est pas supprimée ; elle est amaigrie.
+
+**2. Chambres de métiers et de l'artisanat — rien trouvé, contrôle incomplet.**
+Le portail national `artisanat.fr` ne rend que des services génériques
+(formalités, Performa numérique, carte professionnelle, RNM) et **aucun outil
+lié au tatouage, à l'hygiène ou à la traçabilité**. `INCONNU` demeure : les CMA
+sont régionales et départementales, et seul le portail national a été balayé.
+**C'est le seul trou du contrôle.**
+
+**3. Ministère de l'Agriculture / DDPP — NON déclenché, et le texte joue même en
+faveur d'A1.** Les annexes de l'arrêté du 3 avril 2014 (modifié par l'arrêté du
+7 juillet 2016) ont été récupérées et **extraites en local** :
+`https://info.agriculture.gouv.fr/gedei/site/bo-agri/document_administratif-d8cd82e2-98d9-48d6-b709-6efb2e85c8ac/telechargement`
+
+Elles comportent une **Annexe I (dispositions générales)** et une **Annexe II
+(dispositions complémentaires par espèces et par activité)**, dont un
+**Chapitre VI « Registres »** qui prescrit le registre d'entrée et de sortie des
+animaux de l'article **R.214-30-3 du Code rural** :
+
+> « Ce registre est **côté, tenu sans blanc, ni rature, ni surcharge** […] Toutes
+> les données figurant dans ce registre sont consignées, à chaque mouvement, de
+> façon **lisible et indélébile**. Les corrections éventuelles sont entrées
+> séparément en indiquant la raison de la modification. Tout volume du registre
+> portant mention d'un animal vivant doit être conservé dans les locaux pendant
+> **trois années** après la sortie. »
+
+**Prescription du contenu et de la forme, aucun tableau vierge à remplir.**
+L'éliminatoire n° 2 n'est pas déclenché. Mieux : « sans blanc, ni rature, ni
+surcharge », « indélébile », « corrections entrées séparément avec leur motif »
+est **le cahier des charges d'un journal d'écritures inaltérable** — ce qu'un
+registre numérique satisfait structurellement mieux que le papier.
+
+**4. Service-public.fr / entreprendre.service-public.fr — NON déclenché.**
+Aucun téléservice ni formulaire de tenue de registre pour le tatouage. Le site
+traite la réglementation de l'élevage de chiens et chats
+(`https://www.service-public.fr/particuliers/vosdroits/F33452`) et les obligations
+RGPD générales, sans fournir d'outil sur le besoin visé.
+
+### 5bis.5 Application de la règle de décision du § 5.5
+
+| Volet | Résultat |
+|---|---|
+| 18 ARS instruites | **18/18**, aucun outil qualifiant |
+| Contrôles adjacents négatifs | **3 sur 4** (agriculture, service-public, CMA *sous réserve*) |
+| Contrôles adjacents positifs | **1 sur 4** — CNIL, sur un sous-besoin distinct |
+
+**Verdict, en appliquant le § 5.5 sans l'assouplir :**
+
+1. **La réserve « contrôle ARS non exhaustif » de `PISTES_APPS.md` est LEVÉE.**
+   Les 18 ARS ont été instruites, dont une par correction d'un domaine mal
+   inféré. Aucune ne distribue d'outil de traçabilité ou de registre client.
+   Le motif est net et vaut mieux qu'une absence de résultat : **les ARS
+   prescrivent explicitement la traçabilité client et ne fournissent
+   explicitement rien pour la tenir.**
+2. **A1 survit, amaigrie sur sa branche bien-être.** L'éliminatoire n° 2 est
+   déclenché par la CNIL sur le registre des activités de traitement. Ce
+   sous-besoin doit sortir de la proposition de valeur d'A1, dans `PISTES_APPS.md`.
+   Le dossier client — consentement, traçabilité de lot, archivage probant — n'est
+   couvert par aucun outil public.
+3. **Une réserve résiduelle reste ouverte, et elle est nommée** : les CMA
+   régionales et départementales n'ont pas été balayées. Le portail national ne
+   rend rien, mais `INCONNU` s'applique au réseau. À traiter avant tout
+   engagement, au même titre que l'habilitation Urssaf sur A2.
+4. **Le § 5.5 prévoyait « 4 contrôles adjacents négatifs » pour une levée pleine.
+   Il y en a 3.** La levée est donc **complète sur le volet ARS** et **partielle
+   sur le volet adjacent**. Je ne la présente pas comme totale.
+
+**Ce que ce contrôle ne dit pas.** Il établit qu'aucun outil public gratuit ne
+couvre le dossier client. Il ne dit rien de l'irritant lui-même : les § 1 à 3 du
+protocole restent entièrement à exécuter, et c'est toujours eux qui décident.
+
+---
+
 ## 6. Ce que ce test ne prouvera pas
 
 À écrire dans le compte rendu, pour que personne ne surinterprète le résultat :
