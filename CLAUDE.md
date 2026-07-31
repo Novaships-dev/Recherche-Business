@@ -123,6 +123,23 @@ Un secteur éliminé sur l'un de ces critères est abandonné, pas noté.
    constaté, pas déduit d'une mention marketing. Relever aussi les pages de
    comparaison tarifaire agressive entre éditeurs : signe d'une guerre de prix
    déjà engagée. Protocole : étape 4 et § E.
+
+   **Deuxième forme de l'éliminatoire n° 2 — la gratuité publique.** Un outil
+   gratuit fourni par l'État, une chambre consulaire ou un organisme financé par
+   cotisation obligatoire, portant sur l'obligation elle-même, vaut concurrent
+   gratuit — même si aucun éditeur privé n'offre la gratuité. On ne concurrence
+   pas un outil prescrit et financé par l'impôt.
+
+   Arbitrage de l'utilisateur du 31/07/2026, sur le cas de l'outil registre
+   phytosanitaire du ministère de l'Agriculture (co-développé avec Chambres
+   d'agriculture France, opérationnel janvier 2027).
+
+   **Conséquence opératoire, à exécuter dès l'étape 6.** Quand une échéance
+   réglementaire est identifiée, chercher **dans la même passe** si l'État,
+   une chambre consulaire ou un organisme à cotisation obligatoire accompagne
+   l'obligation d'un outil. Une échéance n'est une opportunité que si personne
+   ne distribue gratuitement le moyen de s'y conformer. Ce contrôle n'avait été
+   fait sur aucun des quatre premiers secteurs.
 3. **Certification, agrément ou référencement d'État portant sur le logiciel
    métier lui-même** → éliminé : un développeur solo ne peut pas l'obtenir.
    À vérifier séparément et explicitement, en cherchant les termes `agrément`,
