@@ -1316,3 +1316,96 @@ décident.
 Elle établit qu'aucun outil public gratuit ne couvre le dossier client. **Elle
 ne dit rien de l'irritant lui-même.** La mauvaise tenue du dossier reste non
 prouvée en primaire, et c'est toujours la réserve la plus lourde d'A1.
+
+---
+
+## 06/08/2026 — Session 10 : deuxième passe par irritant, 30 métiers nouveaux
+
+**Livrable : `recherche/PISTES_APPS_2.md`.** Même méthode que `PISTES_APPS.md`
+(protocole sectoriel suspendu, trois éliminatoires, seuil 500 clients à
+50 €/mois, transverses d'abord). Aucun des 30 métiers n'avait été traité.
+
+### Le résultat principal : un irritant enfin mesuré par l'État
+
+Quatre enquêtes DGCCRF indépendantes, sur quatre secteurs sans rapport, mesurent
+le même échec — le document réglementaire à remettre au client avant la
+prestation n'est pas tenu :
+
+| Secteur | Année | Contrôlés | En anomalie | Taux |
+|---|---|---:|---:|---:|
+| Dépannage à domicile | 2023 | 548 | 350 | 64 % |
+| Réparation automobile | 2024 | ~1 600 | ~640 | ~40 % |
+| Optique et audioprothèse (100 % santé) | 2023-24 | 700+ | 514 | 72 % |
+| Prestations funéraires | 2017-18 | `INCONNU` | `INCONNU` | 66 % **NON VÉRIFIÉ** |
+
+C'est la première fois dans ce corpus qu'un irritant repose sur une **mesure
+d'État chiffrée** et non sur un blog d'éditeur. Les deux premières lignes ont
+été lues directement (DREETS Pays de la Loire, UFC-Que Choisir) ; la ligne
+automobile est relayée par **Movalib, éditeur de logiciel de garage** — conflit
+d'intérêt noté dans la fiche.
+
+**Réserve de fond, écrite dans le livrable :** un taux d'anomalie mesure la
+non-conformité, pas la douleur. La DGCCRF relève dans le même mouvement des
+fraudes délibérées. **La part subie de la non-conformité est `INCONNU`** — c'est
+la question que ce fichier ne peut pas trancher.
+
+### Trois pistes retenues, une non instruite
+
+- **A1 — Devis conforme de l'intervention technique** (plombier, serrurier,
+  garagiste, carrossier, deux-roues + électricien, vitrier, couvreur).
+  **≥ 88 377 entreprises à ≥ 1 salarié, pénétration requise ≤ 0,57 %** — la plus
+  basse des deux passes. Trois éliminatoires francs. **Réutilisation BTP forte
+  (3/3)**, et pour la première fois les corps de métier concernés sont *déjà*
+  écrits dans l'app existante.
+- **A2 — Le formulaire imposé par arrêté** (opticien, audioprothésiste, pompes
+  funèbres, agence de voyage). L'éliminatoire n° 1 (agrément CNDA) ferme la
+  facturation mais **pas le devis normalisé**, qui s'impose y compris hors
+  remboursement. L'éliminatoire n° 2 est **partiellement déclenché** : l'État
+  fournit le formulaire vierge — précédent CNIL de la session 9 appliqué tel quel.
+- **A3 — Le bien confié** (pressing, cordonnier, horloger, encadreur, garage,
+  deux-roues). Mécanique juridique commune établie sur l'INC (arrêté du
+  27 mars 1987, loi du 31 décembre 1903 modifiée en 2016, présomption de
+  responsabilité, délais 2 mois / 1 an). **Irritant non prouvé côté professionnel.**
+- **A4 — Fluides frigorigènes : NON INSTRUITE.** Publiée pour ne pas être perdue,
+  ses trois éliminatoires sont `INCONNU`, pas franchis.
+
+### Quatre fermetures nettes, obtenues à bas coût
+
+- **Vétérinaire : fermé deux fois en deux requêtes.** n° 1 — tous les éditeurs de
+  logiciels vétérinaires **doivent faire qualifier leur logiciel**, liste publiée
+  par l'Ordre (17 produits). n° 2 — **CalypsoVet**, gratuit, porté par l'Ordre
+  (cotisation obligatoire), le ministère de l'Agriculture et le FTAP.
+- **Apiculture : fermée deux fois.** Téléprocédure d'État gratuite pour la
+  déclaration de ruches, et **Beekube** gratuit et illimité pour le registre
+  d'élevage réglementaire.
+- **Déménagement : fermé.** **Mobilio** annonce devis, lettre de voiture,
+  factures, calcul de volume et déclaration de valeur **gratuits**.
+- **Boucher / boulanger : fermé alors que c'est la plus grosse population du
+  fichier** (34 806 à ≥ 1 salarié). Trois applications HACCP gratuites héritées
+  de la session 8. **La taille du marché ne compense jamais un éliminatoire.**
+
+### Deux acquis de méthode
+
+1. **La tranche `NN` est redevenue exploitable.** Elle rend une valeur réelle sur
+   **27 des 40 codes** testés (75.00Z = 9 361, 47.22Z = 9 430, 96.01B = 8 459),
+   là où elle plafonnait presque partout au 31/07/2026. Les populations
+   d'indépendants sont donc connues sur la majorité de ces métiers.
+2. **Un faux irritant intercepté avant publication.** La DRM aux douanes,
+   envisagée pour les cavistes, **ne les concerne pas** : c'est le statut
+   douanier du vin en droits suspendus qui déclenche l'obligation, pas le métier.
+   Et pour ceux qui y sont soumis, le dépôt passe par **CIEL**, téléprocédure
+   gratuite de la douane. Vérifier à qui s'applique une obligation avant d'en
+   faire une piste.
+
+### Trois limites, à connaître avant d'exploiter le fichier
+
+1. **Reddit reste inaccessible** (`API Error 400`, retesté le 06/08/2026), comme
+   en session 8.
+2. **Les forums métier testés sont fermés** : `apiculture-france.com` et
+   `ruches-apiculture.com` ne rendent que leur page de connexion. Aucun fil de
+   forum métier n'a pu être lu dans cette session.
+3. **`economie.gouv.fr` renvoie HTTP 403 à l'agent** (Cloudflare), en récupération
+   de page comme en `curl` avec en-tête de navigateur. **Trois chiffres du
+   livrable sont marqués `NON VÉRIFIÉ`** et ne doivent pas ressortir ailleurs :
+   66 % funéraire, 55 % agences de voyage, et le chiffrage alternatif
+   « 1 300 contrôlés / 75 % » du 100 % santé.
