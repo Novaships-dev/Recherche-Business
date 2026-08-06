@@ -629,6 +629,147 @@ protocole restent entièrement à exécuter, et c'est toujours eux qui décident
 
 ---
 
+## 5 ter. INSTRUCTION DU RISQUE CNIL — exécutée le 31/07/2026
+
+Question posée : *les modèles et outils gratuits publiés par la CNIL couvrent-ils
+l'obligation telle qu'elle pèse sur un praticien bien-être — registre des
+traitements, information du client, réponse aux demandes d'accès — ou seulement
+une partie ?*
+
+**Réponse : seulement une partie, et c'est la partie la moins importante pour A1.**
+
+### 5ter.1 Le point de départ : le praticien bien-être est pleinement assujetti
+
+Aucune ambiguïté, et c'est ce qui rend la question sérieuse. Le RGPD s'applique
+« à toute personne traitant des données personnelles, y compris les thérapeutes
+indépendants (naturopathes, ostéopathes, sophrologues, etc.) », et « même si vous
+ne stockez que des dossiers papier, vous êtes concerné ». Toute donnée révélant
+l'état de santé est sensible, « qu'elle soit collectée par un médecin conventionné
+ou par un thérapeute non médecin » : « l'absence de statut conventionnel n'exonère
+pas le praticien des obligations RGPD ».
+`https://praticonnect.com/blog/rgpd-pour-les-therapeutes-ce-qui-change-en-2026` ·
+`https://www.numetik-avocats.fr/medecine-non-conventionnelle/praticien/documents-obligatoires/registre-rgpd-praticien/`,
+consultés le 31/07/2026. *(Sources : éditeur et cabinet d'avocats — poids faible
+sur le constat de terrain, mais elles ne font que restituer le droit.)*
+
+Point de droit décisif : le praticien traite des données de santé **de façon
+routinière**. Il ne relève donc **pas** de la dérogation de l'article 30.5 du
+RGPD pour les structures de moins de 250 salariés, qui ne vaut que pour « des
+cas très particuliers de traitements, mis en œuvre de manière occasionnelle et
+non routinière » sans risque, **données sensibles exclues**.
+`https://www.cnil.fr/fr/RGPD-le-registre-des-activites-de-traitement`, consulté
+le 31/07/2026. **Le registre est obligatoire pour lui, sans exception.**
+
+### 5ter.2 Obligation par obligation
+
+| Obligation | Ce que la CNIL fournit gratuitement | Couverture |
+|---|---|---|
+| **Registre des traitements** | **Modèle de registre simplifié**, `.ods` / `.pdf` / `.rtf`, avec fiche tutorielle, liste de traitements, fiche à remplir et fiche d'exemple. Générique, « destiné à répondre aux besoins les plus courants […] des petites structures » | **Couverte** — outil réel, gratuit, directement utilisable |
+| **Information du client** | **Modèles de mentions d'information** et exemples de formulaires de collecte, dont une **affiche d'information en lieu de soins**. La CNIL les qualifie elle-même d'« illustrations à adapter ou compléter, **non des modèles universels** » | **Partiellement couverte** — des exemples à retravailler, pas un outil |
+| **Réponse aux demandes d'accès** | Une **page pédagogique** « Professionnels : comment répondre à une demande de droit d'accès ? ». Les modèles de courrier publiés sont destinés **aux particuliers qui exercent leur droit**, pas aux professionnels qui y répondent | **Non couverte** — de la doctrine, aucun outil |
+| **Analyse d'impact (AIPD)** | **Logiciel PIA**, gratuit, open source, 20 langues, utilisable sans installation | Couverte, mais **hors périmètre d'A1** : c'est une analyse ponctuelle, pas la tenue d'un dossier |
+| **Dossier client lui-même** — consentement signé, questionnaire de santé, traçabilité, archivage probant | **Rien** | **Non couverte** |
+
+Sources, toutes consultées le 31/07/2026 :
+`https://www.cnil.fr/fr/le-registre-rgpd-de-la-cnil` ·
+`https://www.cnil.fr/sites/cnil/files/atoms/files/registre-traitement-simplifie.ods` ·
+`https://www.cnil.fr/fr/les-modeles-de-mentions-dinformation` ·
+`https://www.cnil.fr/fr/modele/mention/affiche-dinformation-lieu-de-soins` ·
+`https://www.cnil.fr/fr/respecter-les-droits-des-personnes/professionnels-comment-repondre-une-demande-de-droit-dacces` ·
+`https://www.cnil.fr/fr/outil-pia-telechargez-et-installez-le-logiciel-de-la-cnil`
+
+### 5ter.3 Le fait nouveau : l'instrument sectoriel de la CNIL les exclut nommément
+
+La CNIL publie un **« Référentiel relatif aux traitements de données à caractère
+personnel destinés à la gestion des cabinets médicaux et paramédicaux »** — le
+seul document qui adapte le RGPD au dossier patient, et qui dispense de
+formalité spécifique en cas de conformité pleine.
+
+Le PDF n'était pas lisible par l'outil de récupération ; **extrait en local**, son
+champ d'application est explicite :
+
+> « […] encadre la mise en œuvre des traitements de données à caractère personnel
+> par **les professions médicales et paramédicales** dans le cadre de la gestion
+> médicale et administrative de leur patientèle. **Il s'adresse aux professionnels
+> de santé exerçant à titre libéral.** Il ne s'applique pas aux traitements mis en
+> œuvre par les services de soins […] ni à ceux mis en œuvre par les services de
+> médecine d'entités publiques ou privées […], par les pharmaciens, par les
+> laboratoires d'analyses de biologie […] »
+
+`https://www.cnil.fr/sites/default/files/atoms/files/referentiel_-_cabinet.pdf`,
+extrait le 31/07/2026.
+
+**Un naturopathe, un sophrologue ou un hypnothérapeute n'est pas un professionnel
+de santé** au sens de la quatrième partie du Code de la santé publique — c'est
+exactement le motif pour lequel Doctolib les a exclus en 2022, faute de RPPS ou
+d'ADELI (§ A7 de `PISTES_APPS.md`).
+
+**Conséquence : ils sont pris en tenaille.** Assujettis aux mêmes obligations que
+les médecins sur les données de santé, mais **exclus du seul instrument que la
+CNIL a construit pour ces obligations**. Il ne leur reste que des modèles
+génériques conçus pour « les besoins les plus courants » d'une TPE quelconque.
+**Ce contrôle n'a pas réduit l'écart d'A1 sur cette branche : il l'a élargi.**
+
+### 5ter.4 Application de la règle de décision du § 5.5
+
+**L'éliminatoire n° 2 est déclenché sur UNE des trois obligations citées — le
+registre des traitements — et sur aucune autre.** Il n'est pas déclenché sur
+l'information du client (exemples à adapter, pas un outil), ni sur la réponse aux
+demandes d'accès (pédagogie seule), ni sur le dossier client, qui est le cœur d'A1.
+
+**La branche bien-être d'A1 n'est donc pas éliminée.**
+
+**Correction d'une formulation du § 5bis.4.** J'y écrivais que la branche
+bien-être « perd son argument le plus visible » et se trouve « amaigrie ». La
+direction était bonne, l'ampleur était surévaluée : l'exclusion des praticiens
+non réglementés du référentiel sectoriel — que je ne connaissais pas en écrivant
+5bis — compense largement la perte du registre. **A1 conserve ses cinq métiers.**
+
+**Ce qu'A1 doit cesser de vendre, à porter dans `PISTES_APPS.md`** (non appliqué
+ici, la consigne portant sur ce seul fichier) : « nous tenons votre registre des
+traitements RGPD ». La CNIL le fait gratuitement et mieux. Ce qui reste, et que
+personne ne fait : **le dossier client opposable** — consentement horodaté,
+questionnaire de santé, traçabilité, archivage probant, export de contrôle.
+
+### 5ter.5 Population et seuil de transversalité — recalcul NON appliqué
+
+La consigne prévoyait un recalcul **si** l'éliminatoire était déclenché sur la
+branche. **La condition n'est pas remplie ; je ne l'applique pas.** Les valeurs en
+vigueur restent celles de la fiche A1 :
+
+- **Population : `INCONNU`, minorée à 20 700** — 15 000 tatoueurs (SNAT) +
+  5 700 praticiens bien-être retirés de Doctolib. Pénétration requise pour
+  500 clients : **2,4 %**.
+- **Seuil de transversalité (§ 3.2, seuil n° 3) : inchangé** — sur 3 à 5 métiers
+  de contrôle, **au moins 2** doivent franchir les deux premiers seuils.
+
+**Pour que la décision reste auditable, voici ce que le recalcul aurait donné si
+l'éliminatoire avait porté sur toute la branche** — chiffres de contingence,
+**non retenus** :
+
+| | En vigueur | Contingence (non appliquée) |
+|---|---|---|
+| Métiers | 5 | 4 |
+| Population minorée | **20 700** | 17 576 *(15 000 tatoueurs + 2 576 éleveurs félins professionnels)* |
+| Pénétration pour 500 clients | **2,4 %** | 2,8 % |
+| Pénétration à 30 €/mois (833 clients) | **4,0 %** | 4,7 % |
+
+**Le vrai coup n'aurait pas été la population — 15 % d'écart — mais la
+transversalité.** Sans le bien-être, A1 ne compte plus que **deux blocs
+réglementaires distincts** : l'effraction cutanée (tatoueur et perceur relèvent
+de la même déclaration ARS et de la même certification hygiène et salubrité —
+c'est un seul régime, pas deux métiers) et le vivant animal (pet-sitter,
+éleveur). Le seuil n° 3, « au moins 2 métiers de contrôle sur 3 à 5 », serait
+devenu **inapplicable** : avec deux blocs, il faudrait exiger que **les deux**
+franchissent, sans aucune tolérance à l'échec. Une piste transverse à deux blocs
+dont aucun ne peut faillir n'est plus une piste transverse — et A1 serait passée
+**derrière A3** au classement.
+
+C'est ce qui se jouait dans ce contrôle, et c'est pourquoi il valait d'être
+instruit avant les entretiens plutôt qu'après.
+
+---
+
 ## 6. Ce que ce test ne prouvera pas
 
 À écrire dans le compte rendu, pour que personne ne surinterprète le résultat :

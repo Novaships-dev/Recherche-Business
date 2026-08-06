@@ -185,6 +185,15 @@ documenté au § 5 de `CLAUDE.md`). Forme de la requête :
   4 % du CA —
   `https://www.france-epargne.fr/news/naturopathes-et-praticiens-du-bien-etre-face-a-un-durcissement-reglementaire-en-2026`,
   consulté le 31/07/2026.
+  ⚠️ **Sur ces trois obligations, une seule reste un irritant exploitable.** Le
+  contrôle du 31/07/2026 (`recherche/TEST_TERRAIN_A1.md` § 5 ter) a établi que la
+  CNIL fournit gratuitement un **modèle de registre des traitements simplifié**
+  (`.ods` / `.pdf` / `.rtf`, explicitement destiné aux TPE) —
+  `https://www.cnil.fr/fr/le-registre-rgpd-de-la-cnil`, consulté le 31/07/2026.
+  **Le registre des traitements sort donc du périmètre d'A1** (voir
+  « Ce qu'A1 ne vend pas » ci-dessous). L'information du client n'est couverte
+  que par des « illustrations à adapter, non des modèles universels », et la
+  réponse aux demandes d'accès par une page pédagogique sans outil.
   · Pet-sitters : le **contrat écrit est obligatoire** pour toute garde
   rémunérée, au titre de l'**article L214-6-1 du Code rural et de la pêche
   maritime** —
@@ -210,6 +219,36 @@ documenté au § 5 de `CLAUDE.md`). Forme de la requête :
   Ce qui manque partout : la **valeur probante** (horodatage inaltérable,
   export opposable en cas de contrôle ARS / DDPP / CNIL).
 
+- **Ce qu'A1 ne vend pas — exclusion explicite, arrêtée le 31/07/2026** —
+  **le registre des activités de traitement RGPD est hors de la proposition de
+  valeur.** Ne jamais l'annoncer, ni comme fonctionnalité, ni comme argument.
+  La CNIL le fournit gratuitement, complet et directement utilisable : c'est un
+  concurrent gratuit d'autorité publique au sens de la deuxième forme de
+  l'éliminatoire n° 2 (§ 2 de `CLAUDE.md`). Sont également hors périmètre
+  l'AIPD (logiciel **PIA** de la CNIL, gratuit et open source) et tout ce qui
+  relève de la doctrine RGPD.
+  **Ce qu'A1 vend, et que rien ne couvre** : le **dossier client opposable** —
+  consentement horodaté, questionnaire de santé, traçabilité de lot, archivage
+  probant, export de contrôle. C'est un objet distinct du registre des
+  traitements, lequel décrit les traitements de l'organisme et non les pièces
+  par client. Instruction complète : `recherche/TEST_TERRAIN_A1.md` § 5 ter.
+
+- **État de la branche bien-être — AMAIGRIE, non supprimée** — elle perd son
+  argument le plus visible, celui que citait la source du durcissement 2026
+  (« tenir un registre des traitements »), retiré ci-dessus. Elle conserve le
+  dossier client, et le contrôle du 31/07/2026 y a **élargi** l'écart plutôt que
+  de le réduire : le **« Référentiel relatif aux traitements […] destinés à la
+  gestion des cabinets médicaux et paramédicaux »**, seul instrument par lequel
+  la CNIL adapte le RGPD au dossier patient, **s'adresse nommément aux seuls
+  professionnels de santé exerçant à titre libéral** —
+  `https://www.cnil.fr/sites/default/files/atoms/files/referentiel_-_cabinet.pdf`,
+  extrait le 31/07/2026. Naturopathes, sophrologues et hypnothérapeutes n'en
+  relèvent pas (même motif que leur exclusion de Doctolib, § A7) : assujettis
+  comme les médecins, privés de l'instrument construit pour l'être.
+  **Conséquence sur le classement : aucune. A1 conserve ses cinq métiers**, et
+  le recalcul de population n'est pas appliqué — la condition qui l'aurait
+  déclenché (éliminatoire portant sur toute la branche) n'est pas remplie.
+
 - **Prix et revenu** — 25 à 40 €/mois. Un tatoueur facture le tatouage plusieurs
   centaines d'euros ; 30 €/mois est marginal. **500 clients à 50 €/mois =
   300 k€/an** ; à 30 €/mois il faut **833 clients**. Sur une base minorée de
@@ -221,10 +260,35 @@ documenté au § 5 de `CLAUDE.md`). Forme de la requête :
      hygiène et salubrité et la déclaration ARS pèsent sur **le professionnel**,
      jamais sur l'outil (`https://www.paca.ars.sante.fr/activite-de-tatouage-percage-corporel-et-maquillage-permanent-0`,
      consulté le 31/07/2026).
-  2. *Outil public gratuit* : **NON déclenché** — aucun outil d'État ou
-     consulaire trouvé sur le consentement ou la traçabilité de ces métiers.
-     ⚠️ **Contrôle non exhaustif** : les ARS sont régionales, une initiative
-     locale n'est pas exclue. À reprendre région par région avant d'engager.
+  2. *Outil public gratuit* : **NON déclenché sur le besoin visé** — vérifié le
+     31/07/2026, détail et URL dans `recherche/TEST_TERRAIN_A1.md` § 5 bis.
+     · **ARS : réserve LEVÉE. 18 régions sur 18 instruites**, aucune ne
+     distribue de registre ni de fiche de traçabilité client. Le motif est plus
+     net qu'une absence de résultat : elles **prescrivent** explicitement la
+     traçabilité client — Occitanie décrit jusqu'au contenu attendu du registre,
+     le guide 25 pages de Nouvelle-Aquitaine impose « une fiche de traçabilité
+     […] pour chaque désinfection » — et ne fournissent **aucun** des documents
+     correspondants. Ce qu'elles distribuent : déclarations d'activité, listes
+     de formations habilitées et de prestataires DASRI, déclarations d'effet
+     indésirable, affiches. Informer n'est pas outiller.
+     · **CNIL : déclenché sur un sous-besoin, et sur lui seul** — le registre
+     des activités de traitement, retiré du périmètre d'A1 ci-dessus. Pas sur le
+     dossier client.
+     · **Agriculture / DDPP et service-public.fr : NON déclenché.** L'arrêté du
+     3 avril 2014 prescrit la forme du registre d'élevage (« côté, tenu sans
+     blanc, ni rature, ni surcharge », « indélébile », corrections motivées
+     séparément) sans fournir de support — soit le cahier des charges d'un
+     journal inaltérable, qu'un registre numérique sert mieux que le papier.
+     ⚠️ **Réserve résiduelle nommée — les CMA régionales et départementales.**
+     Les tatoueurs sont immatriculés au répertoire des métiers ; une chambre de
+     métiers est financée par cotisation obligatoire, donc un **émetteur
+     qualifiant** au sens de la deuxième forme de l'éliminatoire n° 2. Seul le
+     portail national `artisanat.fr` a été balayé le 31/07/2026 : il ne rend que
+     des services génériques (formalités, Performa numérique, carte
+     professionnelle, RNM) et aucun outil d'hygiène ou de traçabilité. **Le
+     réseau régional et départemental, lui, n'a pas été instruit : `INCONNU`.**
+     C'est le seul trou du contrôle. À fermer avant tout engagement, au même
+     titre que l'habilitation Urssaf sur A2.
   3. *Gratuit crédible d'un acteur établi* : **NON déclenché** sur ce besoin.
 
 - **Charge de développement, dev seul** — **10 à 14 semaines** pour un MVP
@@ -235,7 +299,10 @@ documenté au § 5 de `CLAUDE.md`). Forme de la requête :
 
 - **Verdict — À CREUSER.** C'est la seule piste du corpus où une obligation
   légale opposable, transverse à cinq métiers, ne rencontre qu'un seul produit
-  mono-métier ; réserve : la mauvaise tenue du dossier reste à prouver en primaire.
+  mono-métier. Trois réserves, par ordre de poids : la mauvaise tenue du dossier
+  reste à prouver en primaire ; le réseau des **CMA régionales et
+  départementales** n'a pas été balayé (`INCONNU`) ; la **branche bien-être est
+  amaigrie** du registre des traitements, désormais hors périmètre.
 
 ---
 
@@ -499,7 +566,12 @@ documenté au § 5 de `CLAUDE.md`). Forme de la requête :
 - **Verdict — ÉCARTÉ** : irritant excellemment prouvé, mais quatre ans trop tard
   et un concurrent gratuit installé sur le besoin.
   **Note pour A1 :** cette population reste intéressante — pas sur le
-  rendez-vous, mais sur la conformité RGPD / données de santé, où rien ne la sert.
+  rendez-vous, et **pas sur le registre des traitements RGPD**, que la CNIL
+  outille gratuitement, mais sur le **dossier client lui-même** (consentement,
+  questionnaire de santé, archivage probant), où rien ne la sert. Le motif de
+  son exclusion de Doctolib — l'absence de RPPS ou d'ADELI — est **le même** que
+  celui qui l'écarte du référentiel CNIL « cabinets médicaux et paramédicaux » :
+  cf. fiche A1, « État de la branche bien-être ».
 
 ---
 
@@ -728,7 +800,7 @@ gratuites. La population est pourtant la plus large du fichier (56.10C :
 | Rang | Piste | Type | Population défendable | Pénétration pour 500 clients | Éliminatoires | Ce qui la porte / ce qui la fragilise |
 |---|---|---|---|---|---|---|
 | **1** | **A2 — Avance immédiate SAP pour le prestataire solo** | Transverse (7 métiers) | **75 300** entreprises SAP déclarées NOVA | **0,66 %** | 3 franchis, n° 1 **frôlé** | Meilleure économie du fichier et verrou technique réel qui écarte les généralistes · mais habilitation Urssaf à obtenir d'abord, valeur adossée à un crédit d'impôt sous menace politique, et espace encombré |
-| **2** | **A1 — Dossier client conforme du professionnel non-médical** | Transverse (5 métiers) | **`INCONNU`, ≥ 20 000** | **≤ 2,5 %** | **3 franchis** | Seule piste où une obligation légale opposable transverse ne rencontre qu'un produit mono-métier (Clic2Sign) · mais la mauvaise tenue du dossier n'est pas prouvée en primaire |
+| **2** | **A1 — Dossier client conforme du professionnel non-médical** | Transverse (5 métiers) | **`INCONNU`, ≥ 20 000** | **≤ 2,5 %** | **3 franchis**, n° 2 déclenché sur un sous-besoin **retiré du périmètre** (registre RGPD, outil CNIL gratuit) | Seule piste où une obligation légale opposable transverse ne rencontre qu'un produit mono-métier (Clic2Sign) · **18 ARS sur 18 vérifiées** : elles prescrivent la traçabilité et ne l'outillent pas · mais la mauvaise tenue du dossier n'est pas prouvée en primaire, la branche bien-être est **amaigrie** du registre RGPD, et les **CMA régionales** restent `INCONNU` |
 | **3** | **A3 — Prestation à date unique** | Transverse (7 métiers) | **`INCONNU`, ≥ 47 952** | **≤ 1,0 %** | **3 franchis** | Mécanique réellement commune à des métiers que personne ne sert ensemble · mais **irritant non prouvé en source forte** — c'est la réserve la plus lourde du fichier |
 | **4** | **B1 — Devis traiteur au convive** | Mono-métier | **≥ 3 627** | 13,8 % *(base faussée par le plafond)* | 3 franchis | Contrainte allergènes réelle et prix mensuel élevé soutenable · mais mono-métier, preuve d'éditeur, et HACCP adjacent verrouillé |
 
@@ -758,10 +830,16 @@ gratuites. La population est pourtant la plus large du fichier (56.10C :
    Facebook étant inaccessibles à l'agent, ces deux pistes reposent sur des
    obligations légales vérifiées et des sources d'éditeurs. Cinq à dix entretiens
    par métier trancheraient, là où aucune requête supplémentaire ne le fera.
-3. **Constater le périmètre réel des gratuités de Zen Agenda et Fit'Distance.**
+3. **Balayer les CMA régionales et départementales (A1).** Le portail national
+   `artisanat.fr` ne rend aucun outil d'hygiène ou de traçabilité, mais le
+   réseau n'a pas été instruit — et une chambre de métiers est un émetteur
+   qualifiant au sens de l'éliminatoire n° 2. C'est binaire, gratuit à
+   instruire, et c'est le seul trou restant du contrôle du 31/07/2026.
+   Requête type : `site:cma-[région].fr tatouage hygiène traçabilité registre`.
+4. **Constater le périmètre réel des gratuités de Zen Agenda et Fit'Distance.**
    Deux pistes (A4, A7) sont fermées sur des déclarations d'éditeurs non
    vérifiées par essai — ce que le § 2 de `CLAUDE.md` interdit explicitement de
    tenir pour acquis.
-4. **Reprendre les chiffres secondaires sur leur source primaire** : les
+5. **Reprendre les chiffres secondaires sur leur source primaire** : les
    82 776 organismes SAP sur la publication DGE, les 15 000 tatoueurs sur le
    SNAT, les élevages félins sur le LOOF.

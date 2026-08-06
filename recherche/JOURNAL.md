@@ -1238,3 +1238,81 @@ couvrent l'obligation telle qu'elle pèse sur un praticien, **l'éliminatoire de
 l'outil public gratuit est déclenché sur la branche bien-être d'A1**, qui se
 réduirait alors aux tatoueurs et aux métiers du vivant animal. Ce contrôle est
 placé au même rang de priorité que les 18 ARS.
+
+---
+
+## 31/07/2026 — Session 9 : § 5 du protocole A1 exécuté (ARS, CNIL, contrôles adjacents)
+
+Livrables : `recherche/TEST_TERRAIN_A1.md` § 5 bis et § 5 ter, puis report dans
+`recherche/PISTES_APPS.md`. **Seul le § 5 a été exécuté** — les § 1 à 4 du
+protocole (entretiens, seuils, Clic2Sign) restent entiers, et ce sont eux qui
+décident.
+
+### Établi
+
+- **18 ARS sur 18 instruites, aucun outil qualifiant.** Aucune ne distribue de
+  registre ni de fiche de traçabilité client. Ce qu'elles distribuent :
+  déclarations d'activité, listes de formations habilitées et de prestataires
+  DASRI, déclarations d'effet indésirable, affiches. **La réserve « contrôle ARS
+  non exhaustif » de `PISTES_APPS.md` est levée.**
+- **Le motif vaut mieux qu'une absence de résultat** : les ARS **prescrivent**
+  explicitement la traçabilité client sans fournir le document. Occitanie décrit
+  jusqu'au contenu attendu du registre ; le guide de 25 pages de
+  Nouvelle-Aquitaine impose « une fiche de traçabilité […] pour chaque
+  désinfection » et la conservation des consentements de mineurs pendant 3 ans,
+  et **aucune de ses 7 annexes** n'est un registre, une fiche de traçabilité ou
+  un consentement. C'est la ligne « informer n'est pas outiller », du bon côté.
+- **Le modèle de domaine ARS était faux sur un point** : `ile-de-france` n'existe
+  pas, le domaine réel est `iledefrance` (sans tirets). Deux exceptions au modèle
+  `[région].ars.sante.fr`, pas une : `paca` et `iledefrance`.
+- **CNIL : éliminatoire déclenché sur une obligation, et une seule** — le
+  registre des activités de traitement, pour lequel elle publie un modèle
+  simplifié gratuit destiné aux TPE. Pas sur l'information du client
+  (« illustrations à adapter […] non des modèles universels »), pas sur la
+  réponse aux demandes d'accès (une page pédagogique, aucun outil), pas sur le
+  dossier client, qui est le cœur d'A1.
+- **Le fait nouveau, et il joue en faveur d'A1** : le référentiel CNIL
+  « cabinets médicaux et paramédicaux » — seul instrument adaptant le RGPD au
+  dossier patient — **s'adresse nommément aux seuls professionnels de santé
+  exerçant à titre libéral**. Naturopathes, sophrologues et hypnothérapeutes en
+  sont exclus, pour le motif exact qui les a fait sortir de Doctolib. Assujettis
+  comme les médecins, privés de l'instrument construit pour l'être : **le
+  contrôle a élargi l'écart d'A1 sur cette branche au lieu de le réduire.**
+- **Agriculture / DDPP et service-public.fr : non déclenchés.** L'arrêté du
+  3 avril 2014 prescrit la forme du registre d'élevage — « côté, tenu sans
+  blanc, ni rature, ni surcharge », « indélébile », corrections motivées
+  séparément — sans fournir de support. C'est le cahier des charges d'un journal
+  inaltérable, qu'un registre numérique satisfait mieux que le papier.
+
+### Deux méthodes qui ont servi et qui resserviront
+
+1. **Un PDF illisible par l'outil de récupération n'est pas une donnée
+   manquante** : le guide ARS Nouvelle-Aquitaine et le référentiel CNIL ont été
+   **extraits en local** pour être tranchés. Les deux pièces les plus difficiles
+   à écarter sont celles qu'il fallait lire.
+2. **Vérifier un domaine par requête HTTP avant de le publier.** Cinq domaines
+   étaient vérifiés, treize inférés d'un modèle — le modèle était faux une fois
+   sur treize. Une inférence de forme n'est pas une source (§ 1.2 de
+   `CLAUDE.md`).
+
+### Reporté dans `PISTES_APPS.md` (06/08/2026)
+
+- **Le registre des traitements RGPD est exclu de la proposition de valeur
+  d'A1**, explicitement et par écrit — avec l'AIPD (logiciel PIA). La CNIL le
+  fait gratuitement et mieux. Ce qui reste, et que personne ne couvre : le
+  **dossier client opposable**.
+- **La branche bien-être est notée AMAIGRIE, non supprimée.** A1 conserve ses
+  cinq métiers ; le recalcul de population n'est pas appliqué, sa condition
+  n'étant pas remplie. Les chiffres de contingence sont conservés au § 5ter.5
+  du protocole pour que la décision reste auditable.
+- **Réserve résiduelle ouverte et nommée : les CMA régionales et
+  départementales.** Seul le portail national `artisanat.fr` a été balayé — il
+  ne rend que des services génériques. Le réseau est `INCONNU`. C'est le seul
+  trou du contrôle, porté au § « Ce qui reste à faire » au même rang que
+  l'habilitation Urssaf sur A2.
+
+### Ce que cette session ne dit pas
+
+Elle établit qu'aucun outil public gratuit ne couvre le dossier client. **Elle
+ne dit rien de l'irritant lui-même.** La mauvaise tenue du dossier reste non
+prouvée en primaire, et c'est toujours la réserve la plus lourde d'A1.
