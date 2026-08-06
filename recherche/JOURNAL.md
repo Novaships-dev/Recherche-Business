@@ -1409,3 +1409,75 @@ la question que ce fichier ne peut pas trancher.
    livrable sont marqués `NON VÉRIFIÉ`** et ne doivent pas ressortir ailleurs :
    66 % funéraire, 55 % agences de voyage, et le chiffrage alternatif
    « 1 300 contrôlés / 75 % » du 100 % santé.
+
+---
+
+## 06/08/2026 — Session 11 : exécution des § 4 et § 5 de TEST_TERRAIN_P2A1
+
+Deux volets desktop de la piste A1 de la deuxième passe, ceux qui pouvaient la
+tuer avant tout entretien. **Un des deux a mordu.**
+
+### Le fait : CMA France distribue un outil de devis gratuit
+
+**Éliminatoire n° 2 DÉCLENCHÉ.** CMA France a retenu **Abby** à l'issue d'un
+**marché public** pour déployer, sous marque CMA, un outil de gestion dont
+l'offre **Basique est à 0 €/mois, sans engagement, sans carte bancaire, avec
+« devis et factures illimités »** et « facturation électronique conforme ». La
+CMA affiche « Un conseiller CMA pour vous accompagner ». Site dédié
+`cma-gestion.fr` ; relais constatés en Martinique, La Réunion, Île-de-France,
+Nouvelle-Aquitaine, Grand Est, Aude, Aveyron.
+
+La CMA est financée par la taxe pour frais de chambres de métiers : c'est la
+deuxième forme de l'éliminatoire n° 2 (§ 2 de `CLAUDE.md`).
+
+**Ce que ça retire à A1** : la brique « produire un devis et une facture », et
+— Abby étant une plateforme agréée par l'État — la brique « facturation
+électronique », barrée une seconde fois par l'éliminatoire n° 1. **Même
+traitement que le registre RGPD retiré d'A1 en session 9.** Ce qui reste : une
+couche de conformité seule (barème, rétractation, double devis pièce de
+réemploi, traçabilité du refus), posée sur un socle gratuit que la chambre
+consulaire pousse à tous les artisans.
+
+### Ce qui n'a pas pu être tranché
+
+**Éliminatoire n° 3 : `INCONNU`.** Le § 4 demandait un **essai réel** des offres
+gratuites. Aucun compte n'a été créé : ce qui a été mené est un contrôle
+documentaire, que le § 2 de `CLAUDE.md` juge explicitement insuffisant. Huit à
+dix cases sur dix restent `INCONNU` chez les quatre produits. **La règle de
+décision du § 4.2 n'a donc pas été appliquée** — lire « aucun ne dépasse 3 cases
+donc non déclenché » aurait été convertir un `INCONNU` en « non ».
+
+**Il reste deux heures de travail, quatre comptes gratuits, et cette tâche
+décide seule du sort d'A1.** Les entretiens terrain (§ 1 à 3, deux jours) ne
+doivent pas être lancés avant.
+
+### La leçon de méthode : le modèle de domaine est faux, encore
+
+Comme les ARS en session 9, mais pire : **le modèle `cma-[région].fr` est faux
+dans 12 cas sur 18.** Cinq formes coexistent (`cma-`, `crma-`, `cmar-`,
+`artisanat-`, et des domaines sans racine commune : `cma.corsica`,
+`artisanat974.re`, `cmarguadeloupe.org`, `cma-martinique.com`). La liste réelle
+des 17 domaines est au § 5bis.1 de `TEST_TERRAIN_P2A1.md`.
+
+**Et c'est ce test de domaine qui a produit la découverte** : sans lui, les CMA
+de Martinique et de La Réunion — deux des domaines les moins prévisibles —
+n'auraient pas été interrogées, et le partenariat Abby serait passé inaperçu.
+
+### Restes `INCONNU`, écrits comme tels
+
+- **Mayotte** : aucune CMA de région instruite, 6 domaines candidats testés,
+  tous morts.
+- **`artisanat.fr`** : HTTP 429 à trois tentatives espacées.
+- **DGCCRF** : contrôle adjacent n° 1 non exécuté, HTTP 403 (Cloudflare) en
+  récupération de page comme en `curl`.
+- **Neuf CMA sur dix-sept** n'ont pas rendu de recherche interne exploitable.
+  Leur silence n'est pas une absence d'outil.
+- **Le périmètre réel de la gratuité d'Abby n'est pas constaté par essai** — il
+  est établi sur trois pages concordantes, dont deux tenues par des CMA.
+
+### Portée au-delà d'A1
+
+Le réseau des CMA est désormais établi comme un **distributeur actif d'outils
+gratuits**, pas comme un émetteur de brochures. **Toute piste future dont le
+cœur est un document commercial d'artisan doit être testée contre CMA × Abby en
+premier.** La réserve « CMA » de `PISTES_APPS.md` est annotée en conséquence.

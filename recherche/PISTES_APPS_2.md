@@ -290,17 +290,25 @@ animale **987** (`NN` = 6 319) · 47.79Z biens d'occasion **1 884** ·
   logiciel —
   `https://www.nord.gouv.fr/Demarches/Immatriculation-carte-grise/Habilitation-et-agrement-au-Systeme-d-Immatriculation-des-Vehicules-SIV`,
   consulté le 06/08/2026. Aucun agrément d'État sur le logiciel de devis.
-  · **n° 2 NON déclenché, avec une réserve.** La **CAPEB** met des « modèles de
-  devis » à disposition de ses adhérents
-  (`https://www.capeb.fr/service/modeles-de-devis`, consulté le 06/08/2026) et la
-  **CMA région PACA** propose une formation « Rédigez rapidement des devis ou
-  factures conformes »
-  (`https://www.cmar-paca.fr/se-former/04-05-13-83-84/redigez-rapidement-des-devis-ou-factures-conformes-et-attractifs`,
-  consulté le 06/08/2026). **Ce sont un modèle de document et une formation, pas
-  un outil.** Mais la CAPEB est une organisation professionnelle et la CMA une
-  chambre consulaire : **le réseau des CMA doit être balayé région par région
-  avant d'engager quoi que ce soit** — c'est exactement le trou laissé ouvert sur
-  A1 dans la première passe.
+  · **n° 2 DÉCLENCHÉ — contrôle exécuté le 06/08/2026, résultat défavorable.**
+  Le balayage des 17 CMA de région annoncé comme réserve a été mené
+  (`recherche/TEST_TERRAIN_P2A1.md` § 5 bis). **CMA France a retenu Abby à
+  l'issue d'un marché public** pour distribuer, sous marque CMA, un outil de
+  gestion dont l'offre **« Basique » est à 0 €/mois, sans engagement, sans carte
+  bancaire, avec « devis et factures illimités »** et « facturation électronique
+  conforme » — `https://www.cma-gestion.fr/` et
+  `https://www.cma-martinique.com/facturation-electronique-martinique/`,
+  consultés le 06/08/2026. La CMA affiche elle-même « Un conseiller CMA pour vous
+  accompagner ». Une chambre consulaire est financée par la taxe pour frais de
+  chambres de métiers : **c'est la deuxième forme de l'éliminatoire n° 2.**
+  → **La brique « produire un devis et une facture » sort du périmètre d'A1**,
+  exactement comme le registre RGPD en était sorti en première passe. Abby étant
+  en outre une **plateforme agréée par l'État**, la brique « facturation
+  électronique » est barrée une seconde fois par l'éliminatoire n° 1.
+  **Ce qui reste : la seule couche de conformité** (barème affiché, devis avant
+  intervention en urgence, rétractation et renonciation expresse, double devis
+  pièce neuve / pièce de réemploi, traçabilité du refus, archivage opposable) —
+  **`INCONNU` tant que les gratuits n'ont pas été essayés.**
   · **n° 3 NON déclenché sur le besoin précis, mais la brique adjacente est
   gratuite.** Sur le devis-facture nu, au moins trois offres gratuites existent :
   **Free Devis Factures** annonce un « module garagiste gratuit » incluant
@@ -323,12 +331,17 @@ animale **987** (`NN` = 6 319) · 47.79Z biens d'occasion **1 884** ·
   métiers-là**. Piège vérifié sur TRANSPORT : contrôler vers **quoi** chaque
   brique transpose — ici, aucune n'atterrit dans une zone certifiée.
 
-- **Verdict — À CREUSER, premier du fichier.** Meilleure pénétration requise du
-  corpus (0,57 %), irritant mesuré par l'État sur deux familles indépendantes,
-  trois éliminatoires francs, et la réutilisation de code la plus forte
-  rencontrée jusqu'ici. **Deux réserves à lever avant tout engagement** : le
-  balayage des CMA régionales (éliminatoire n° 2), et la question de savoir si un
-  artisan en anomalie *veut* se mettre en conformité.
+- **Verdict — À CREUSER, AMPUTÉE.** *(Verdict initial du 06/08/2026 : « À
+  CREUSER, premier du fichier ». Révisé le même jour après exécution du contrôle
+  CMA.)* La pénétration requise reste la meilleure du corpus (0,57 %) et
+  l'irritant est mesuré par l'État sur deux familles indépendantes. Mais
+  **l'éliminatoire n° 2 a emporté la brique devis-facture**, et il ne reste
+  qu'une **couche de conformité posée sur un socle gratuit que la CMA pousse
+  activement à tous les artisans de France**. **Trois réserves, dont une
+  bloquante** : (1) l'essai réel des offres gratuites — deux heures, il décide
+  seul de ce qu'il reste ; (2) la question de savoir si un artisan en anomalie
+  *veut* se mettre en conformité ; (3) le contrôle DGCCRF non exécuté (403).
+  **Ne pas engager les entretiens terrain avant la réserve (1).**
 
 ---
 
@@ -952,7 +965,7 @@ pour 500 clients. **Leurs éliminatoires sont `INCONNU`, pas franchis.**
 
 | Rang | Piste | Type | Population défendable | Pénétration pour 500 clients | Éliminatoires | Ce qui la porte / ce qui la fragilise |
 |---|---|---|---|---|---|---|
-| **1** | **A1 — Devis conforme de l'intervention technique** | Transverse (5 métiers demandés + 3 élargis) | **≥ 88 377** *(minorant)* | **≤ 0,57 %** | **3 franchis** | Meilleure pénétration requise des deux passes · irritant **mesuré par l'État** sur deux familles indépendantes (64 % et ~40 % d'anomalie) · **réutilisation BTP forte (3/3)** · mais la brique devis est gratuite chez trois acteurs, les **CMA régionales** restent `INCONNU`, et rien ne prouve qu'un artisan en anomalie veuille se mettre en conformité |
+| **1** | **A1 — Devis conforme de l'intervention technique** *(AMPUTÉE le 06/08/2026)* | Transverse (5 métiers demandés + 3 élargis) | **≥ 88 377** *(minorant)* | **≤ 0,57 %** | **n° 2 DÉCLENCHÉ sur la brique devis-facture** · n° 1 franchi · **n° 3 `INCONNU`** | Meilleure pénétration requise des deux passes · irritant **mesuré par l'État** sur deux familles indépendantes (64 % et ~40 % d'anomalie) · **réutilisation BTP forte (3/3)** · mais **CMA France distribue Abby gratuitement sous sa marque, choisi par marché public** : il ne reste qu'une couche de conformité sur un socle gratuit. **Son rang ne tient que si l'essai des gratuits confirme que la conformité n'y est pas** — deux heures de travail, non faites |
 | **2** | **A2 — Le formulaire imposé par arrêté** | Transverse (4 métiers) | **17 328** *(≥ 1 salarié)* · 37 255 avec `NN` | **≤ 2,89 %** | **2 franchis**, n° 1 **contourné par la seule lame du devis normalisé**, n° 2 **partiellement déclenché** | Obligation opposable, sanction lourde (retrait d'habilitation funéraire), 72 % d'anomalie mesuré en optique-audio · mais l'État fournit le formulaire vierge, et le produit n'existe que s'il couvre quatre métiers aux arrêtés différents |
 | **3** | **A3 — Le bien confié au professionnel** | Transverse (6 métiers) | **≥ 35 494** *(minorant)* | **≤ 1,41 %** | **3 franchis** | Mécanique juridique réellement commune (arrêté 1987, loi 1903, présomption de responsabilité), délais légaux 2 mois / 1 an qu'aucun outil ne suit, marché vertical et cloisonné · mais **irritant non prouvé côté professionnel** et prix soutenable bas (25-40 €/mois) |
 
@@ -1028,11 +1041,21 @@ d'électroménager et gardiennage de véhicules (A3).
 > tranche est celle que ce fichier ne peut pas trancher : **parmi les artisans en
 > anomalie, quelle part subit la non-conformité et quelle part la choisit ?**
 
-1. **Balayer les CMA régionales et départementales — pour A1 cette fois.** Une
-   chambre de métiers qui distribuerait un outil de devis conforme au dépannage à
-   domicile fermerait la piste n° 1. C'est binaire, gratuit à instruire, et c'est
-   la même réserve que la première passe avait laissée ouverte sans la lever.
-   Requête type : `site:cma-[région].fr devis dépannage domicile arrêté 2017`.
+1. ~~**Balayer les CMA régionales et départementales — pour A1 cette fois.**~~
+   **FAIT le 06/08/2026, résultat défavorable** (`recherche/TEST_TERRAIN_P2A1.md`
+   § 5 bis). 17 CMA de région sur 18 instruites — Mayotte et `artisanat.fr`
+   restent `INCONNU`. **CMA France distribue Abby gratuitement sous marque CMA,
+   après marché public** : éliminatoire n° 2 déclenché sur la brique
+   devis-facture, retirée du périmètre d'A1.
+   **Remplacé par la tâche qui décide maintenant : essayer réellement les quatre
+   offres gratuites** (Abby, Free Devis Factures, Henrri, Synobat) et vérifier si
+   l'une couvre la rétractation à 14 jours ou le double devis pièce neuve /
+   pièce de réemploi. Deux heures, quatre comptes, aucune dépense. **Si oui, A1
+   est morte. Ne pas lancer les entretiens terrain avant ce résultat.**
+   *À noter pour toute piste future* : le réseau des CMA est désormais établi
+   comme un **distributeur actif d'outils gratuits**, pas comme un émetteur de
+   brochures. Toute piste dont le cœur est un document commercial d'artisan doit
+   être testée contre CMA × Abby **en premier**.
 2. **Reprendre les taux DGCCRF sur leurs pages primaires.** `economie.gouv.fr`
    est inaccessible à l'agent (HTTP 403, Cloudflare). Trois chiffres du fichier
    sont **NON VÉRIFIÉS** et ne doivent pas ressortir ailleurs en l'état : le

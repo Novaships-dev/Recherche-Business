@@ -4,6 +4,21 @@ Piste concernée : **A1 — Le devis conforme de l'intervention technique**
 (`recherche/PISTES_APPS_2.md`, partie A). Classée **n° 1** au 06/08/2026, avec
 une réserve unique et bloquante.
 
+> **ÉTAT AU 06/08/2026 — les § 4 et § 5 ont été exécutés.** Résultats en
+> **§ 4 bis** et **§ 5 bis**, en fin de fichier. Les § 1, 2, 3 et 6 restent à
+> faire, et **leur exécution est désormais conditionnée** au résultat du § 4,
+> qui n'a pas pu être clos.
+>
+> **En un paragraphe.** L'**éliminatoire n° 2 est DÉCLENCHÉ sur la brique
+> « produire un devis et une facture »** : **CMA France a retenu Abby à l'issue
+> d'un marché public** pour distribuer, sous marque CMA, un outil de gestion
+> dont l'offre **Basique est à 0 €/mois, sans engagement, sans carte bancaire,
+> avec devis et factures illimités**. Cette brique **sort du périmètre d'A1**,
+> comme le registre RGPD en était sorti en première passe. **L'éliminatoire n° 3
+> n'a pas pu être tranché** : l'essai réel des offres gratuites suppose la
+> création de comptes, que je n'ai pas faite — le § 4 reste `INCONNU`, et il
+> décide seul de savoir s'il reste un produit.
+
 **Ce qui se décide ici.** L'obligation est établie et datée (arrêté du 24 janvier
 2017 pour le dépannage à domicile, loi du 8 octobre 2018 pour les pièces issues
 de l'économie circulaire). Le **non-respect** est établi et chiffré par l'État :
@@ -598,6 +613,259 @@ que l'obligation. Les CMA ne sont pas le seul émetteur possible.
   réserve « CMA régionales `INCONNU` » de `PISTES_APPS_2.md` est **levée**, et
   doit être réécrite comme telle dans la fiche A1 — ainsi que dans
   `PISTES_APPS.md`, où elle traîne depuis le 31/07/2026.
+
+---
+
+## 4 bis. RÉSULTAT DU § 4 — exécuté le 06/08/2026, **NON CLOS**
+
+### 4bis.1 Ce qui n'a pas été fait, et il faut le dire d'abord
+
+**Aucun compte n'a été créé sur aucun des produits.** Le § 4 demandait un
+**essai réel** ; ce qui a été mené est un **contrôle documentaire** — pages
+produit, pages tarifaires, listes de fonctionnalités. C'est précisément
+l'instrument que le § 2 de `CLAUDE.md` juge insuffisant : « le périmètre réel de
+la gratuité doit être constaté, pas déduit d'une mention marketing ».
+
+**Conséquence, appliquée sans arrangement.** La règle du § 4.2 se lit en cases
+**cochées ou non cochées**. Ici la quasi-totalité des cases est **`INCONNU`**, et
+`INCONNU` n'est pas « non ». **La règle de décision du § 4.2 ne peut donc pas
+être appliquée. Le résultat du § 4 est `INCONNU`, et la réserve reste ouverte.**
+
+### 4bis.2 Un quatrième produit est entré dans le périmètre, et c'est le principal
+
+Le § 4 listait trois produits. Le contrôle du § 5 en a fait apparaître un
+quatrième, qui les domine tous : **Abby**, distribué sous marque CMA (voir
+§ 5 bis). Il est ajouté au tableau.
+
+| Produit | Gratuité annoncée | Constaté le 06/08/2026 |
+|---|---|---|
+| ✅ **Abby / « Solution CMA »** · `https://www.cma-gestion.fr/` *(page lue)* · `https://abby.fr/tarifs` *(page lue)* | **Offre Basique 0 €/mois**, « sans carte bancaire », « sans engagement », « résiliable à tout moment » | **Non bridée sur le devis** : « Devis & factures illimités », « Facturation électronique conforme (plateforme agréée par l'État) », « Livre des recettes & des achats », « Estimation URSSAF & alertes seuils TVA » — **13 fonctionnalités dans l'offre gratuite** |
+| ✅ **Free Devis Factures** *(page lue)* | Module garagiste gratuit | « Le module garagiste de Free Devis Factures est **entièrement gratuit. Il ne nécessite aucune licence supplémentaire** ». Fonctions listées : fiches véhicules, historique par véhicule, recherche par plaque, association véhicule/devis/facture/**ordre de réparation**, suivi du contrôle technique. **Aucune limite d'usage mentionnée** |
+| ✅ **Henrri** · `https://www.henrri.com/facture-garagiste/` | Facturation gratuite pour garage | **Non instruit au-delà de la page produit.** `INCONNU` |
+| ✅ **Synobat** · `https://synobat.fr/logiciel-devis-facture-plombier` | Formule de départ gratuite | **Bridée** : « 3 devis de plomberie et 3 factures par mois ». Seule gratuité bridée des quatre |
+
+### 4bis.3 La liste de contrôle à 10 cases — état réel
+
+`OUI` = constaté sur une page lue · `NON` = absence constatée sur une page qui
+énumère les fonctionnalités · `INCONNU` = non instruit, faute de compte.
+
+| # | Critère | Abby / CMA | Free Devis Factures | Henrri | Synobat |
+|---|---|---|---|---|---|
+| 1 | Barème horaire et forfait de déplacement distincts | `INCONNU` | `INCONNU` | `INCONNU` | `INCONNU` |
+| 2 | Bon de commande hors établissement distinct du devis | `INCONNU` | `INCONNU` | `INCONNU` | `INCONNU` |
+| 3 | Formulaire type de rétractation à 14 jours généré | `INCONNU` | `INCONNU` | `INCONNU` | `INCONNU` |
+| 4 | Renonciation expresse au délai en cas d'urgence | `INCONNU` | `INCONNU` | `INCONNU` | `INCONNU` |
+| 5 | Document horodaté et opposable | `INCONNU` | `INCONNU` | `INCONNU` | `INCONNU` |
+| 6 | Devis en deux versions, pièce neuve / pièce de réemploi | `INCONNU` | **NON** *(la page énumère les fonctions du module garagiste et ne la cite pas)* | `INCONNU` | s.o. |
+| 7 | Refus du client consigné dans le dossier de réparation | `INCONNU` | **NON** *(idem)* | `INCONNU` | s.o. |
+| 8 | Ordre de réparation distinct du devis | `INCONNU` | **OUI** | `INCONNU` | s.o. |
+| 9 | Archivage retrouvable dans la durée | **OUI** *(« Archivage des documents », offre Start à 7,20 €/mois — donc **hors** de l'offre gratuite)* | `INCONNU` | `INCONNU` | `INCONNU` |
+| 10 | Gratuité bridée ? Limite exacte | **NON bridée** — devis et factures illimités | **NON bridée** annoncée | `INCONNU` | **BRIDÉE** — 3 devis + 3 factures / mois |
+
+**Cases réellement cochées, au sens du § 4.2 :** Abby 2, Free Devis Factures 3,
+Henrri 0, Synobat 1. **Mais huit à dix cases sur dix sont `INCONNU` chez
+chacun** : le compte n'atteint pas le seuil parce que la mesure n'a pas eu lieu,
+pas parce que la fonction est absente. **Lire ce tableau comme un « aucun ne
+dépasse 3 cases donc l'éliminatoire n° 3 est confirmé non déclenché » serait
+exactement la faute que le § 4.2 existe pour empêcher.**
+
+### 4bis.4 Ce qui a tout de même été établi
+
+Deux faits solides, obtenus sans compte :
+
+1. **La brique devis-facture est gratuite et non bridée chez au moins deux
+   acteurs**, dont celui que distribue la chambre consulaire. Le point 10 est le
+   seul de la liste qui soit tranché, et il est tranché dans le sens
+   défavorable.
+2. **Aucun des quatre ne met en avant la conformité de l'arrêté du 24 janvier
+   2017 ni celle de la loi du 8 octobre 2018.** Abby annonce « plus de 60
+   fonctionnalités » et n'en cite aucune ; la page du module garagiste de Free
+   Devis Factures énumère sept fonctions et n'en cite aucune. **C'est un indice
+   favorable à A1, pas une preuve** : une page produit n'énumère jamais tout.
+
+### 4bis.5 Ce qu'il reste à faire, et ce que ça coûte
+
+**Deux heures, quatre créations de compte, aucune dépense.** Créer un compte
+gratuit sur Abby, Free Devis Factures, Henrri et Synobat, produire un devis de
+dépannage et un devis de réparation automobile sur chacun, et remplir les
+colonnes `INCONNU` du tableau du § 4bis.3.
+
+**C'est désormais la tâche qui décide seule du sort d'A1** — voir § 5bis.5.
+
+---
+
+## 5 bis. RÉSULTAT DU § 5 — exécuté le 06/08/2026, **ÉLIMINATOIRE N° 2 DÉCLENCHÉ**
+
+### 5bis.1 Correction préalable : le modèle de domaine des CMA est faux, plus encore que celui des ARS
+
+Les domaines candidats ont été testés par requête HTTP (`curl`, code de retour et
+URL effective après redirections). **Le modèle `cma-[région].fr` annoncé au
+§ 5.2 est faux dans 12 cas sur 18** — la session 9 avait constaté le même piège
+sur les ARS, avec un taux d'erreur plus faible.
+
+**Cinq formes coexistent** : `cma-`, `crma-`, `cmar-`, `artisanat-`, et des
+domaines sans aucune de ces racines (`cma.corsica`, `artisanat974.re`,
+`cmarguadeloupe.org`, `cma-martinique.com`).
+
+| Région | Domaine réel | Statut au 06/08/2026 |
+|---|---|---|
+| Provence-Alpes-Côte d'Azur | `cmar-paca.fr` | ✅ 200 — le `cma-paca.fr` du § 5.2 **n'existe pas** |
+| Auvergne-Rhône-Alpes | `cma-auvergnerhonealpes.fr` | ✅ 200 — modèle correct |
+| Bourgogne-Franche-Comté | `artisanat-bfc.fr` | ✅ 200 — **modèle faux** |
+| Bretagne | `crma-bretagne.fr` | ✅ 200 — **modèle faux** (`crma`) |
+| Centre-Val de Loire | `cma-centrevaldeloire.fr` | ✅ 200 — modèle correct |
+| Corse | `cma.corsica` | ✅ 200 — **modèle faux**, TLD régional |
+| Grand Est | `cma-alsace-moselle-grandest.fr` | ✅ 200 — **modèle faux**, `cma-grandest.fr` y redirige |
+| Hauts-de-France | `cma-hautsdefrance.fr` | ✅ 200 — modèle correct |
+| Île-de-France | `cma-idf.fr` | ✅ 200 — `crma-idf.fr` répond aussi |
+| Normandie | `cma-normandie.fr` | ✅ 200 — modèle correct |
+| Nouvelle-Aquitaine | `cma-nouvelleaquitaine.fr` | ✅ 200 — modèle correct |
+| Occitanie | `artisanat-occitanie.fr` | ✅ 200 — **modèle faux** ; certificat rejeté par l'outil de récupération, lu en `curl -k` |
+| Pays de la Loire | `artisanatpaysdelaloire.fr` | ✅ 200 — **modèle faux** |
+| Guadeloupe | `cmarguadeloupe.org` | ✅ 200 — **modèle faux**, TLD `.org` |
+| Guyane | `cma-guyane.fr` | ✅ 200 — modèle correct |
+| Martinique | `cma-martinique.com` | ✅ 200 — **modèle faux**, TLD `.com` |
+| La Réunion | `artisanat974.re` | ✅ 200 — **modèle faux**, TLD `.re` |
+| **Mayotte** | **aucun domaine propre trouvé** | ⬜ **`INCONNU`** — 6 candidats testés, tous morts. Les annuaires renvoient vers `artisanat.fr` |
+
+**17 CMA de région sur 18 instruites. Mayotte reste `INCONNU`** — pas « rien
+trouvé ». Le portail national `artisanat.fr` a répondu **HTTP 429 (Too Many
+Requests)** à trois tentatives espacées : **il n'a pas pu être interrogé**, et
+c'est également `INCONNU`.
+
+### 5bis.2 La recherche interne : 8 sites sur 17 ont rendu des résultats
+
+Requête `?s=devis` exécutée sur les 17 domaines. Neuf n'ont rien rendu à cette
+URL (moteur interne différent, ou absent) : leur statut est `INCONNU`, pas
+« aucun outil ». Les huit qui ont répondu :
+
+| CMA | Ce que rend la recherche « devis » |
+|---|---|
+| **Martinique** | **« Notre solution de gestion et de facturation électronique — Solution CMA pour les artisans »**, « Facturation et devis illimités » |
+| **La Réunion** | **« La facturation électronique arrive. Anticipez simplement avec la CMA »**, même solution, « + de 100 000 clients » |
+| Corse | Résultats sur Répar'Acteurs, **aucun outil de devis** |
+| Hauts-de-France | Une formation, **aucun outil** |
+| Normandie | Actualité sans rapport, **aucun outil** |
+| Centre-Val de Loire | Formations ADEA « **sur devis** » — faux positif, c'est le prix de la formation |
+| Bretagne | Page de résultats vide de contenu utile |
+| Guyane | Formation « **Créer ses factures et devis sur Excel** » (2020) — **former n'est pas outiller**, ne déclenche pas |
+
+### 5bis.3 Le fait qui déclenche : CMA France a retenu Abby par marché public
+
+Les pages de Martinique et de La Réunion pointent toutes deux vers la **même URL
+d'authentification** : `https://app.abby.fr/v2/auth/cma/login`. Ce n'est pas une
+initiative locale, c'est un **dispositif national**.
+
+**Établi le 06/08/2026, sur pages lues :**
+
+- **« Le réseau des CMA a sélectionné, à l'issue d'un marché public, la start-up
+  nancéienne Abby »** pour déployer **« un outil de gestion à la marque des
+  CMA »** —
+  `https://www.lagazettefrance.fr/article/nancy-abby-est-choisi-par-le-reseau-des-cma-pour-accompagner-les-artisans-dans-la-facturation-electronique`
+  et `https://www.lejournaldesentreprises.com/breve/la-start-up-abby-ete-retenue-par-cma-france-pour-accompagner-les-artisans-face-la-facturation-2146145`.
+- Site dédié : ✅ **`https://www.cma-gestion.fr/`** *(page lue)* — « CMA × Abby ·
+  La gestion de votre entreprise artisanale, simplifiée », « Solution propulsée
+  par Abby », « sans engagement », « résiliable à tout moment ».
+- **Périmètre de la gratuité, constaté sur la page tarifaire de la CMA
+  Martinique** *(page lue)* : offre **« Basique — Pour démarrer et facturer
+  gratuitement — 0 € par mois, sans carte bancaire »**, comprenant
+  « Facturation électronique conforme », **« Devis et factures illimités »**,
+  « Livre des recettes et des achats », « Estimation URSSAF et alertes de seuils
+  TVA », **« Parmi les 13 fonctionnalités incluses »**.
+- Trois arguments affichés par la CMA elle-même : **« Plateforme agréée par
+  l'État »**, **« Version gratuite, sans engagement »**, **« Un conseiller CMA
+  pour vous accompagner »**.
+- Diffusion nationale constatée hors outre-mer : ✅ CMA Île-de-France
+  (`https://www.cma-idf.fr/services/facturation-electronique`), ✅ CMA
+  Nouvelle-Aquitaine
+  (`https://cma-nouvelleaquitaine.fr/a-cote-de-chez-vous/actualites/facture-electronique-obligation`),
+  ✅ CMA de l'Aude, ✅ CMA de l'Aveyron, ✅ CMA Grand Est — rencontrées par
+  requête le 06/08/2026.
+
+**La CMA est une chambre consulaire financée par la taxe pour frais de chambres
+de métiers.** Un outil gratuit qu'elle a choisi par marché public, qu'elle
+distribue sous sa marque et qu'un de ses conseillers accompagne, **est
+exactement la deuxième forme de l'éliminatoire n° 2** au sens du § 2 de
+`CLAUDE.md` (arbitrage du 31/07/2026).
+
+### 5bis.4 Les cinq contrôles adjacents du § 5.4
+
+| # | Contrôle | Résultat au 06/08/2026 |
+|---|---|---|
+| 1 | **DGCCRF / `economie.gouv.fr`** | **NON EXÉCUTÉ.** HTTP 403 (Cloudflare) en récupération de page **et** en `curl` avec en-tête de navigateur. `INCONNU`. **La tâche de 15 minutes en navigateur reste due** |
+| 2 | **`service-public.fr` / `entreprendre.service-public.fr`** | **Aucun téléservice de génération de devis trouvé.** Non déclenché — mais recherche indirecte, à confirmer |
+| 3 | **CCI France et CCI régionales** | **Aucun outil trouvé.** Les résultats ne rendent que des logiciels privés. Non déclenché, avec la même réserve |
+| 4 | **Éco-organismes de la filière automobile** | **Non déclenché.** ✅ `https://www.recyclermonvehicule.fr/` est « l'unique éco-organisme agréé » de la filière VHU ; il organise la collecte et la traçabilité des véhicules, **pas l'information du client par le garagiste**. Aucun outil de double devis ni de traçabilité du refus |
+| 5 | **Organisations professionnelles** | **Ne qualifient pas au sens strict** (adhésion volontaire), mais **deux outils gratuits réels sont à verser au dossier** : ✅ la CAPEB distribue des « modèles de devis » à ses adhérents (`https://www.capeb.fr/service/modeles-de-devis`) et une plateforme gratuite « Déplacements BTP » ; ✅ **RenoReglo**, développé dans le cadre du programme **FEEBAT**, sert à « produire des devis et factures conformes » — **périmètre limité à la rénovation énergétique et aux entreprises RGE** (`https://renoreglo.feebat.org`, via `https://www.capeb.fr/actualites/renovation-energetique-un-nouvel-outil-gratuit`, page lue) |
+
+**Le point 5 est le plus instructif du tableau.** RenoReglo prouve qu'un
+dispositif à financement obligé (les certificats d'économie d'énergie) **sait
+déjà produire un devis conforme à une obligation réglementaire précise**. Il ne
+déclenche pas l'éliminatoire sur A1 — son périmètre est la rénovation
+énergétique, pas le dépannage — mais **il montre le chemin par lequel A1 peut
+être fermée du jour au lendemain.**
+
+### 5bis.5 Application des règles de décision
+
+**§ 4.2 — éliminatoire n° 3 : `INCONNU`.** La règle ne peut pas être appliquée
+faute d'essai réel (§ 4bis.1). **Ni déclenché, ni confirmé non déclenché.**
+
+**§ 5.5 — éliminatoire n° 2 : DÉCLENCHÉ, sur une brique et non sur une branche.**
+C'est le troisième cas de figure prévu au § 5.5, celui du précédent CNIL :
+
+- **Brique « produire un devis et une facture » → RETIRÉE du périmètre d'A1.**
+  Un émetteur qualifiant — la chambre consulaire — distribue gratuitement,
+  nationalement, sans bridage et avec accompagnement humain, un outil qui la
+  couvre. On ne concurrence pas cela.
+- **Brique « facturation électronique » → RETIRÉE également**, et deux fois :
+  Abby est une **plateforme agréée par l'État**, ce qui rejoue l'éliminatoire
+  n° 1 déjà constaté en première passe sur A6 (`PISTES_APPS.md`, § 0).
+- **Brique « conformité de l'arrêté du 24 janvier 2017 et de la loi du 8 octobre
+  2018 » → NON déclenchée en l'état, mais `INCONNU`** tant que le § 4 n'est pas
+  clos. Aucun des quatre produits ne l'annonce ; aucun n'a été essayé.
+
+**Ce qui reste d'A1 après application :** une **couche de conformité**
+— barème affiché, devis avant intervention y compris en urgence, formulaire de
+rétractation et renonciation expresse, double devis pièce neuve / pièce de
+réemploi, traçabilité du refus, archivage opposable — **posée sur un socle
+devis-facture désormais gratuit et poussé par la CMA à tous les artisans de
+France.**
+
+**Conséquence sur le classement, à porter dans `PISTES_APPS_2.md` :** la
+conclusion commerciale de la fiche A1 était « ce produit ne peut pas être vendu
+comme un outil de devis, il affronterait trois gratuits ». **Elle durcit** : il
+affronte désormais **un gratuit distribué par la chambre consulaire elle-même,
+choisi par marché public, avec un conseiller pour l'installer.** La question
+n'est plus « peut-on vendre un outil de devis » — elle est **« une couche de
+conformité seule vaut-elle 40 €/mois par-dessus un outil gratuit que le client a
+déjà »**, et rien dans ce contrôle n'y répond.
+
+**Décision proposée, à arbitrer :**
+1. **Exécuter le § 4 pour de bon** — deux heures, quatre comptes gratuits. Si
+   Abby couvre la rétractation ou le double devis PIEC, **A1 est morte** et
+   l'ordre du classement change. Si aucun ne les couvre, A1 survit, amputée.
+2. **Ne pas lancer les § 1 à 3** avant ce résultat. Les entretiens coûtent deux
+   jours de terrain ; le § 4 coûte deux heures et peut les rendre inutiles.
+   C'est la même logique que « chercher d'abord là où ça ferme » (§ 0.3 de
+   `CLAUDE.md`), appliquée à l'intérieur du protocole.
+3. **Rouvrir la réserve « CMA » dans `PISTES_APPS.md` aussi.** La première passe
+   la portait comme un trou ; elle est désormais **comblée dans le sens
+   défavorable**, et le réseau des CMA est établi comme un **distributeur
+   d'outils gratuits actif**, pas comme un simple émetteur de brochures. Toute
+   piste future dont le cœur est un document commercial d'artisan doit être
+   testée contre CMA × Abby **avant** toute autre instruction.
+
+### 5bis.6 Ce que ce contrôle laisse ouvert
+
+- **Mayotte** : aucune CMA de région instruite. `INCONNU`.
+- **`artisanat.fr`** : HTTP 429 à trois tentatives. `INCONNU`.
+- **Neuf CMA sur dix-sept** n'ont pas rendu de recherche interne exploitable.
+  Leur silence n'est **pas** une absence d'outil.
+- **DGCCRF** : le contrôle adjacent n° 1 n'a pas été exécuté (403).
+- **Le périmètre réel de la gratuité d'Abby n'a pas été constaté par essai** —
+  ce que le § 2 de `CLAUDE.md` exige. La gratuité est établie sur trois pages
+  concordantes, dont deux tenues par des CMA, ce qui est solide ; **elle n'est
+  pas constatée**.
 
 ---
 

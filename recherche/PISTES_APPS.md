@@ -836,6 +836,15 @@ gratuites. La population est pourtant la plus large du fichier (56.10C :
    qualifiant au sens de l'éliminatoire n° 2. C'est binaire, gratuit à
    instruire, et c'est le seul trou restant du contrôle du 31/07/2026.
    Requête type : `site:cma-[région].fr tatouage hygiène traçabilité registre`.
+   ⚠️ **Mise à jour du 06/08/2026** — le réseau a été balayé pour une autre piste
+   (`recherche/TEST_TERRAIN_P2A1.md` § 5 bis) et **le résultat change la façon
+   d'aborder ce contrôle** : les CMA ne sont pas de simples émetteurs de
+   brochures, elles **distribuent activement un outil de gestion gratuit**
+   (Abby, retenu par CMA France après marché public). Deux conséquences : le
+   modèle de domaine `cma-[région].fr` est **faux dans 12 cas sur 18** — la
+   liste des domaines réels est au § 5bis.1 de ce fichier et doit être reprise
+   telle quelle ; et la requête ci-dessus doit être complétée par une
+   vérification directe de ce que couvre l'outil CMA × Abby sur la traçabilité.
 4. **Constater le périmètre réel des gratuités de Zen Agenda et Fit'Distance.**
    Deux pistes (A4, A7) sont fermées sur des déclarations d'éditeurs non
    vérifiées par essai — ce que le § 2 de `CLAUDE.md` interdit explicitement de
