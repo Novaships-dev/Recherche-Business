@@ -1022,6 +1022,12 @@ d'électroménager et gardiennage de véhicules (A3).
 
 ## Ce qui reste à faire avant d'engager quoi que ce soit
 
+> **Les points 1, 2, 4 et 5 sont opérationnalisés dans
+> `recherche/TEST_TERRAIN_P2A1.md`** — protocole de vérification primaire d'A1 en
+> deux jours, avec ses seuils chiffrés fixés à l'avance. La question qu'il
+> tranche est celle que ce fichier ne peut pas trancher : **parmi les artisans en
+> anomalie, quelle part subit la non-conformité et quelle part la choisit ?**
+
 1. **Balayer les CMA régionales et départementales — pour A1 cette fois.** Une
    chambre de métiers qui distribuerait un outil de devis conforme au dépannage à
    domicile fermerait la piste n° 1. C'est binaire, gratuit à instruire, et c'est
